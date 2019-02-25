@@ -18,6 +18,7 @@ class myApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
+
     ///Set color status bar
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
       statusBarColor: Colors.transparent, //or set color with: Color(0xFF0000FF)
@@ -32,6 +33,7 @@ class myApp extends StatelessWidget {
           primaryColor: Colors.white),
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
+
       /// Move splash screen to ChoseLogin Layout
       /// Routes
       routes: <String, WidgetBuilder>{
@@ -49,21 +51,23 @@ class SplashScreen extends StatefulWidget {
 
 /// Component UI
 class _SplashScreenState extends State<SplashScreen> {
-  @override
   /// Setting duration in splash screen
   startTime() async {
     return new Timer(Duration(milliseconds: 4500), NavigatorPage);
   }
+
   /// To navigate layout change
   void NavigatorPage() {
     Navigator.of(context).pushReplacementNamed("login");
   }
+
   /// Declare startTime to InitState
   @override
   void initState() {
     super.initState();
     startTime();
   }
+
   /// Code Create UI Splash Screen
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,9 +82,9 @@ class _SplashScreenState extends State<SplashScreen> {
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   colors: [
-                    Color.fromRGBO(0, 0, 0, 0.3),
-                    Color.fromRGBO(0, 0, 0, 0.4)
-                  ],
+                Color.fromRGBO(0, 0, 0, 0.3),
+                Color.fromRGBO(0, 0, 0, 0.4)
+              ],
                   begin: FractionalOffset.topCenter,
                   end: FractionalOffset.bottomCenter)),
           child: Center(
@@ -92,6 +96,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Padding(
                       padding: EdgeInsets.only(top: 30.0),
                     ),
+
                     /// Text header "Welcome To" (Click to open code)
                     Text(
                       "Welcome to",
@@ -102,6 +107,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         fontSize: 19.0,
                       ),
                     ),
+
                     /// Animation text Treva Shop to choose Login with Hero Animation (Click to open code)
                     Hero(
                       tag: "Treva",

@@ -3,12 +3,13 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/UI/LoginOrSignup/LoginAnimation.dart';
 import 'package:info_apps_flutter/UI/LoginOrSignup/Signup.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 
 class loginScreen extends StatefulWidget {
   @override
   _loginScreenState createState() => _loginScreenState();
 }
+
 /// Component Widget this layout UI
 class _loginScreenState extends State<loginScreen>
     with TickerProviderStateMixin {
@@ -16,6 +17,9 @@ class _loginScreenState extends State<loginScreen>
   AnimationController sanimationController;
 
   var tap = 0;
+
+  var _emailController = TextEditingController();
+  var _passwordController = TextEditingController();
 
   @override
 
@@ -77,6 +81,7 @@ class _loginScreenState extends State<loginScreen>
               end: FractionalOffset.bottomCenter,
             ),
           ),
+
           /// Set component layout
           child: ListView(
             children: <Widget>[
@@ -129,6 +134,7 @@ class _loginScreenState extends State<loginScreen>
                             Padding(
                                 padding: EdgeInsets.symmetric(vertical: 7.0)),
                             buttonCustomGoogle(),
+
                             /// Set Text
                             Padding(
                                 padding: EdgeInsets.symmetric(vertical: 10.0)),
@@ -160,6 +166,7 @@ class _loginScreenState extends State<loginScreen>
                               password: true,
                               email: "Password",
                               inputType: TextInputType.text,
+                              textEditingController: _passwordController,
                             ),
 
                             /// Button Signup
@@ -172,7 +179,7 @@ class _loginScreenState extends State<loginScreen>
                                               new Signup()));
                                 },
                                 child: Text(
-                                  "Not Have Acount? Sign Up",
+                                  "Don't have an account? Sign Up",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 13.0,
@@ -189,11 +196,23 @@ class _loginScreenState extends State<loginScreen>
                       ),
                     ],
                   ),
+
                   /// Set Animaion after user click buttonLogin
                   tap == 0
                       ? InkWell(
                           splashColor: Colors.yellow,
-                          onTap: () {
+                          onTap: () async {
+                            FirebaseUser user;
+                            try {
+                              user = await FirebaseAuth.instance
+                                  .signInWithEmailAndPassword(
+                                      email: _emailController.text,
+                                      password: _passwordController.text);
+                            } on Exception catch (e) {
+                              // TODO: Do something here if the information isn't correct.
+                              // TODO: Or there's no user with this account.
+                            }
+                            //TODO: Pass data to the new screen.
                             setState(() {
                               tap = 1;
                             });
@@ -224,8 +243,14 @@ class textFromField extends StatelessWidget {
   String email;
   IconData icon;
   TextInputType inputType;
+  final textEditingController;
 
-  textFromField({this.email, this.icon, this.inputType, this.password});
+  textFromField(
+      {this.email,
+      this.icon,
+      this.inputType,
+      this.password,
+      this.textEditingController});
 
   @override
   Widget build(BuildContext context) {

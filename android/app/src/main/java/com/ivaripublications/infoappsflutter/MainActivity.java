@@ -1,4 +1,4 @@
-package com.example.infoappsflutter;
+package com.ivaripublications.infoappsflutter;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
