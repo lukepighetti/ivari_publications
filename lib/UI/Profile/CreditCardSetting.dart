@@ -292,27 +292,27 @@ class TransactionsDetail extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            dataTransaction(
+            DataTransaction(
               date: "Jan 01",
               item: "Buy Dress Red Valvet",
               price: "\$ 50",
             ),
-            dataTransaction(
+            DataTransaction(
               date: "Feb 12",
               item: "Buy Iphone X",
               price: "\$ 1000",
             ),
-            dataTransaction(
+            DataTransaction(
               date: "Martch 21",
               item: "Buy Mackbook Pro M21102 SSD 500 GB",
               price: "\$ 2500",
             ),
-            dataTransaction(
+            DataTransaction(
               date: "Oct 16",
               item: "Buy Case Handphone Hello Kity",
               price: "\$ 50",
             ),
-            dataTransaction(
+            DataTransaction(
               date: "Dec 01",
               item: "Buy Dress Blue ",
               price: "\$ 50",
@@ -325,12 +325,12 @@ class TransactionsDetail extends StatelessWidget {
 }
 
 /// Constructor for Transactions Data
-class dataTransaction extends StatelessWidget {
+class DataTransaction extends StatelessWidget {
+  final String date, item, price;
+
+  DataTransaction({this.date, this.item, this.price});
+
   @override
-  String date, item, price;
-
-  dataTransaction({this.date, this.item, this.price});
-
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
