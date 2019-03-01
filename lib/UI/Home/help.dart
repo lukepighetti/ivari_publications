@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
-class help extends StatefulWidget {
-  _helpState createState() => _helpState();
+class HelpWebview extends StatefulWidget {
+  _HelpWebviewState createState() => _HelpWebviewState();
 }
 
-class _helpState extends State<help> {
+class _HelpWebviewState extends State<HelpWebview> {
   @override
   Widget build(BuildContext context) {
     setState(() {});
