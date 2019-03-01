@@ -173,7 +173,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/truck.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => order()));
+                            pageBuilder: (_, __, ___) => OrderScreen()));
                       },
                     ),
                     Padding(

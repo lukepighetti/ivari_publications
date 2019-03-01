@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class order extends StatefulWidget {
+class OrderScreen extends StatefulWidget {
   @override
-  _orderState createState() => _orderState();
+  _OrderScreenState createState() => _OrderScreenState();
 }
 
-class _orderState extends State<order> {
+class _OrderScreenState extends State<OrderScreen> {
   static var _txtCustom = TextStyle(
     color: Colors.black54,
     fontSize: 15.0,
