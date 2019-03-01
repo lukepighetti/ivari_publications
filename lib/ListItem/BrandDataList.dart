@@ -3,7 +3,7 @@ class Brand {
   final String name;
   final String img;
   final String desc;
-  final items item;
+  final Items item;
 
   const Brand({
     this.img,
@@ -14,7 +14,7 @@ class Brand {
   });
 }
 
-class items {
+class Items {
   final String itemName;
   final String itemPrice;
   final String itemRatting;
@@ -22,7 +22,7 @@ class items {
   final String itemId;
   final String itemImg;
 
-  const items(
+  const Items(
       {this.itemName,
       this.itemPrice,
       this.itemRatting,
@@ -38,7 +38,7 @@ List<Brand> brandData = [
       img: "assets/imgBrand/nikeHeader.png",
       desc:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      item: items(
+      item: Items(
           itemImg: "assets/imgBrand/brandNike.jpg",
           itemId: "1",
           itemName: "Nike Sport Shoes Running Man Blue Black",
@@ -51,7 +51,7 @@ List<Brand> brandData = [
       img: "assets/imgBrand/appleHeader.png",
       desc:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      item: items(
+      item: Items(
           itemImg: "assets/imgBrand/brandApple.jpg",
           itemId: "1",
           itemName: "Mackbook Pro SSD 500 GB",
@@ -64,7 +64,7 @@ List<Brand> brandData = [
       img: "assets/imgBrand/fendiHeader.png",
       desc:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      item: items(
+      item: Items(
           itemImg: "assets/imgItem/fashion1.jpg",
           itemId: "1",
           itemName: "Fendi Fashion",
@@ -77,7 +77,7 @@ List<Brand> brandData = [
       img: "assets/imgBrand/gucciHeader.png",
       desc:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      item: items(
+      item: Items(
           itemImg: "assets/imgItem/flashsale2.jpg",
           itemId: "1",
           itemName: "Dress Swite For Girl Brown",
@@ -90,7 +90,7 @@ List<Brand> brandData = [
       img: "assets/imgBrand/samsungHeader.png",
       desc:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      item: items(
+      item: Items(
           itemImg: "assets/imgPromo/imgPromo2.jpg",
           itemId: "1",
           itemName: "Samsung Galaxy S8+ 256 GB",
@@ -103,7 +103,7 @@ List<Brand> brandData = [
       img: "assets/imgBrand/sonyHeader.png",
       desc:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      item: items(
+      item: Items(
           itemImg: "assets/imgPromo/imgPromo8.jpg",
           itemId: "1",
           itemName: "SmartWarch Sonny",
