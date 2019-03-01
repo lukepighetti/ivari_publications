@@ -138,7 +138,8 @@ class _profilState extends State<profil> {
                       image: "assets/icon/creditAcount.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => creditCardSetting()));
+                            pageBuilder: (_, __, ___) =>
+                                CreditCardSettingScreen()));
                       },
                     ),
                     Padding(

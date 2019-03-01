@@ -21,12 +21,13 @@ String numberCC = "9867 - 2312 - 3212 - 4213";
 String nameCC = "Alissa Hearth";
 String cvvCC = "765";
 
-class creditCardSetting extends StatefulWidget {
+class CreditCardSettingScreen extends StatefulWidget {
   @override
-  _creditCardSettingState createState() => _creditCardSettingState();
+  _CreditCardSettingScreenState createState() =>
+      _CreditCardSettingScreenState();
 }
 
-class _creditCardSettingState extends State<creditCardSetting> {
+class _CreditCardSettingScreenState extends State<CreditCardSettingScreen> {
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
