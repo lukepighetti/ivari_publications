@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class settingAcount extends StatefulWidget {
+class SettingAccountScreen extends StatefulWidget {
   @override
-  _settingAcountState createState() => _settingAcountState();
+  _SettingAccountScreenState createState() => _SettingAccountScreenState();
 }
 
-class _settingAcountState extends State<settingAcount> {
+class _SettingAccountScreenState extends State<SettingAccountScreen> {
   static var _txtCustomHead = TextStyle(
     color: Colors.black54,
     fontSize: 17.0,

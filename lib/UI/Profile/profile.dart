@@ -187,7 +187,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       image: "assets/icon/setting.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => settingAcount()));
+                            pageBuilder: (_, __, ___) =>
+                                SettingAccountScreen()));
                       },
                     ),
                     Padding(
