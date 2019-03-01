@@ -3,9 +3,10 @@ import 'package:info_apps_flutter/ListItem/CategorySlider.dart';
 import 'package:info_apps_flutter/UI/Home/home.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-class detailPost extends StatelessWidget {
+/// TODO: dead code
+class DetailPostScreen extends StatelessWidget {
   var post;
-  detailPost({Key key, @required var this.post}) : super(key: key);
+  DetailPostScreen({Key key, @required var this.post}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
