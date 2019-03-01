@@ -6,14 +6,6 @@ class AboutAppsScreen extends StatefulWidget {
 }
 
 class _AboutAppsScreenState extends State<AboutAppsScreen> {
-  @override
-  static var _txtCustomHead = TextStyle(
-    color: Colors.black54,
-    fontSize: 17.0,
-    fontWeight: FontWeight.w600,
-    fontFamily: "Gotik",
-  );
-
   static var _txtCustomSub = TextStyle(
     color: Colors.black38,
     fontSize: 15.0,
@@ -21,6 +13,7 @@ class _AboutAppsScreenState extends State<AboutAppsScreen> {
     fontFamily: "Gotik",
   );
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

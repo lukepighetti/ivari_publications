@@ -198,6 +198,7 @@ class _LoginScreenState extends State<LoginScreen>
                       ? InkWell(
                           splashColor: Colors.yellow,
                           onTap: () async {
+                            /// TODO: implement auth
                             // FirebaseUser user;
                             // try {
                             // user = await FirebaseAuth.instance
@@ -205,10 +206,10 @@ class _LoginScreenState extends State<LoginScreen>
                             //         email: _emailController.text,
                             //         password: _passwordController.text);
                             // } on Exception catch (e) {
-                            // TODO: Do something here if the information isn't correct.
-                            // TODO: Or there's no user with this account.
+                            // // Do something here if the information isn't correct.
+                            // // Or there's no user with this account.
                             // }
-                            //TODO: Pass data to the new screen.
+                            // // Pass data to the new screen.
                             setState(() {
                               tap = 1;
                             });
@@ -218,7 +219,7 @@ class _LoginScreenState extends State<LoginScreen>
                             _playAnimation();
                             return tap;
                           },
-                          child: buttonBlackBottom(),
+                          child: ButtonBlackBottom(),
                         )
                       : LoginAnimation(
                           animationController: sanimationController.view,
@@ -365,7 +366,7 @@ class ButtonCustomGoogle extends StatelessWidget {
 }
 
 ///ButtonBlack class
-class buttonBlackBottom extends StatelessWidget {
+class ButtonBlackBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -206,7 +206,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/callcenter.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => callCenter()));
+                            pageBuilder: (_, __, ___) => CallCenterScreen()));
                       },
                     ),
                     Padding(

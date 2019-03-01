@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/UI/Profile/ChatItem.dart';
 
-class callCenter extends StatefulWidget {
+class CallCenterScreen extends StatefulWidget {
   @override
-  _callCenterState createState() => _callCenterState();
+  _CallCenterScreenState createState() => _CallCenterScreenState();
 }
 
-class _callCenterState extends State<callCenter> {
-  @override
+class _CallCenterScreenState extends State<CallCenterScreen> {
   static var _txtCustomHead = TextStyle(
     color: Colors.black54,
     fontSize: 16.0,
@@ -22,6 +21,7 @@ class _callCenterState extends State<callCenter> {
     fontFamily: "Gotik",
   );
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

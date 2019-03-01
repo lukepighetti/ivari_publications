@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/UI/LoginOrSignup/Login.dart';
 import 'package:info_apps_flutter/UI/LoginOrSignup/LoginAnimation.dart';
@@ -145,14 +143,6 @@ class _SignUpColumnState extends State<SignUpColumn>
     sanimationController.dispose();
   }
 
-  /// Playanimation set forward reverse
-  Future<Null> _playAnimation() async {
-    try {
-      await sanimationController.forward();
-      await sanimationController.reverse();
-    } on TickerCanceled {}
-  }
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -192,7 +182,7 @@ class _SignUpColumnState extends State<SignUpColumn>
         MaterialButton(
             child: Text("Sign in with Google"),
             onPressed: () {
-              /* TODO: Uncomment when Google Login is working.
+              /* TODO: implement Google Login
               googleSignIn.signIn().then((authCredentials) async {
                 if (authCredentials != null) {
                   var authentication = await authCredentials.authentication;

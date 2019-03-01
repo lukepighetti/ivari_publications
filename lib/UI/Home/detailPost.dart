@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/UI/Home/home.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-/// TODO: dead code
 class DetailPostScreen extends StatelessWidget {
   final post;
 
