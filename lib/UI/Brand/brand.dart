@@ -30,7 +30,7 @@ class _BrandScreenState extends State<BrandScreen> {
         InkWell(
           onTap: () {
             Navigator.of(context).push(
-                PageRouteBuilder(pageBuilder: (_, __, ___) => searchAppbar()));
+                PageRouteBuilder(pageBuilder: (_, __, ___) => SearchAppBar()));
           },
           child: Padding(
             padding: const EdgeInsets.only(right: 20.0),

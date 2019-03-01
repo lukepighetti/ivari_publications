@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class searchAppbar extends StatefulWidget {
+class SearchAppBar extends StatefulWidget {
   @override
-  _searchAppbarState createState() => _searchAppbarState();
+  _SearchAppBarState createState() => _SearchAppBarState();
 }
 
-class _searchAppbarState extends State<searchAppbar> {
+class _SearchAppBarState extends State<SearchAppBar> {
   @override
 
   /// Sentence Text header "Hello i am Treva.........."
