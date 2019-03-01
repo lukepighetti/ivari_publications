@@ -1,11 +1,11 @@
-class itemSlider {
+class ItemSlider {
   String id, img, title, imgCover, body, txtDesc2, txtDesc3, txtDesc4;
 
   // itemSlider({this.img,this.title,this.imgCover,this.txtDesc1,this.txtDesc2,this.txtDesc3,this.txtDesc4,});
-  itemSlider({this.title, this.img, this.body});
+  ItemSlider({this.title, this.img, this.body});
 
-  factory itemSlider.fromJson(Map<String, dynamic> json) {
-    return itemSlider(
+  factory ItemSlider.fromJson(Map<String, dynamic> json) {
+    return ItemSlider(
         // title: json['id'] as String,
         // txtDesc1: json['content'] as String,
         // img: json['better_featured_image'] as String

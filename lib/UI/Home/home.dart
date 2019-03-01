@@ -22,12 +22,12 @@ import 'package:flutter/foundation.dart';
 
 String urlApi = "https://saiberart.com/pub/wp-json/wp/v2/";
 
-List<itemSlider> parseitemSlider(String responeBody) {
+List<ItemSlider> parseitemSlider(String responeBody) {
   final parse = json.decode(responeBody).cast<Map<String, dynamic>>();
-  return parse.map<itemSlider>((json) => itemSlider.fromJson(json)).toList();
+  return parse.map<ItemSlider>((json) => ItemSlider.fromJson(json)).toList();
 }
 
-Future<List<itemSlider>> fetchitemSliders(http.Client client) async {
+Future<List<ItemSlider>> fetchitemSliders(http.Client client) async {
   final respone = await client.get(urlApi);
   return compute(parseitemSlider, respone.body);
 }
@@ -40,7 +40,7 @@ class _homeState extends State<home> {
   /// To set duration initState auto start if FlashSale Layout open
   List posts;
 
-  List<itemSlider> item;
+  List<ItemSlider> item;
 
   // Base URL for our wordpress API
   final String apiUrl = "https://saiberart.com/pub/wp-json/wp/v2/";
@@ -579,7 +579,7 @@ class CategoryIconValue extends StatelessWidget {
 }
 
 class CategoryPublisher extends StatelessWidget {
-  List<itemSlider> item;
+  List<ItemSlider> item;
   CategoryPublisher({this.item});
   @override
   Widget build(BuildContext context) {
