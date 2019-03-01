@@ -156,7 +156,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/chat.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => chat()));
+                            pageBuilder: (_, __, ___) => ChatScreen()));
                       },
                     ),
                     Padding(
