@@ -62,7 +62,7 @@ class _BrandScreenState extends State<BrandScreen> {
                       delegate: SliverChildBuilderDelegate(
 
                           /// Calling itemCard Class for constructor card
-                          (context, index) => itemCard(brandData[index]),
+                          (context, index) => ItemCard(brandData[index]),
                           childCount: brandData.length)),
                 ),
               ],
@@ -73,10 +73,10 @@ class _BrandScreenState extends State<BrandScreen> {
 }
 
 /// Constructor for itemCard for List Menu
-class itemCard extends StatelessWidget {
+class ItemCard extends StatelessWidget {
   /// Declaration and Get data from BrandDataList.dart
   final Brand brand;
-  itemCard(this.brand);
+  ItemCard(this.brand);
 
   @override
   Widget build(BuildContext context) {
