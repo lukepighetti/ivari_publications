@@ -266,7 +266,7 @@ class _homeState extends State<home> {
                   onTap: () {
                     Navigator.of(context).pop();
                     Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => french()));
+                        pageBuilder: (_, __, ___) => FrenchWebview()));
                   },
                   child: Text("French",
                       style: TextStyle(

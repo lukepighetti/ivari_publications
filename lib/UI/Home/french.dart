@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
-class french extends StatefulWidget {
-  _frenchState createState() => _frenchState();
+class FrenchWebview extends StatefulWidget {
+  _FrenchWebviewState createState() => _FrenchWebviewState();
 }
 
-class _frenchState extends State<french> {
+class _FrenchWebviewState extends State<FrenchWebview> {
   @override
   Widget build(BuildContext context) {
     setState(() {});
