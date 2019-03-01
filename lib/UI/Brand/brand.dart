@@ -29,8 +29,8 @@ class _brandState extends State<brand> {
       actions: <Widget>[
         InkWell(
           onTap: () {
-            Navigator.of(context).push(PageRouteBuilder(
-                pageBuilder: (_, __, ___) => new searchAppbar()));
+            Navigator.of(context).push(
+                PageRouteBuilder(pageBuilder: (_, __, ___) => searchAppbar()));
           },
           child: Padding(
             padding: const EdgeInsets.only(right: 20.0),
@@ -87,7 +87,7 @@ class itemCard extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
             PageRouteBuilder(
-                pageBuilder: (_, __, ___) => new brandDetail(brand),
+                pageBuilder: (_, __, ___) => brandDetail(brand),
                 transitionDuration: Duration(milliseconds: 600),
                 transitionsBuilder:
                     (_, Animation<double> animation, __, Widget child) {

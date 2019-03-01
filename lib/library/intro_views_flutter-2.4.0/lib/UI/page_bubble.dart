@@ -15,24 +15,24 @@ class PageBubble extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
       width: 55.0,
       height: 65.0,
       decoration:
           BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10.0))),
-      child: new Center(
-        child: new Padding(
+      child: Center(
+        child: Padding(
           padding: const EdgeInsets.all(0.5),
-          child: new Container(
+          child: Container(
             width:
                 60.0, //This method return in between values according to active percent.
             height: 4.0,
-            decoration: new BoxDecoration(
+            decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(0.0)),
               //Alpha is used to create fade effect for background color
               color:
                   viewModel.isHollow ? Colors.white24 : Colors.deepPurpleAccent,
-              border: new Border.all(
+              border: Border.all(
                 color: viewModel.isHollow
                     ? viewModel.bubbleBackgroundColor.withAlpha(
                         (0xFF * (0.1 - viewModel.activePercent)).round())
@@ -40,16 +40,16 @@ class PageBubble extends StatelessWidget {
                 width: 2.0,
               ), //Border
             ), //BoxDecoration
-            child: new Opacity(
+            child: Opacity(
               opacity: viewModel.activePercent,
               child: (viewModel.iconAssetPath != null &&
                       viewModel.iconAssetPath != "")
                   // ignore: conflicting_dart_import
-                  ? new Image.asset(
+                  ? Image.asset(
                       viewModel.iconAssetPath,
                       color: viewModel.iconColor,
                     )
-                  : new Container(),
+                  : Container(),
             ), //opacity
           ), //Container
         ), //Padding

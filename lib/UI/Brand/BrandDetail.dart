@@ -45,7 +45,7 @@ class _brandDetailState extends State<brandDetail> {
         context: context,
         builder: (builder) {
           return SingleChildScrollView(
-            child: new Container(
+            child: Container(
               height: 320.0,
               color: Colors.white,
               child: Column(
@@ -64,7 +64,7 @@ class _brandDetailState extends State<brandDetail> {
                   InkWell(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => new home()));
+                            builder: (BuildContext context) => home()));
                       },
                       child: Text(
                         "Popularity",
@@ -104,7 +104,7 @@ class _brandDetailState extends State<brandDetail> {
         context: context,
         builder: (builder) {
           return SingleChildScrollView(
-            child: new Container(
+            child: Container(
               height: 320.0,
               color: Colors.white,
               child: Column(
@@ -123,7 +123,7 @@ class _brandDetailState extends State<brandDetail> {
                   InkWell(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) => new home()));
+                            builder: (BuildContext context) => home()));
                       },
                       child: Text(
                         "Popularity",
@@ -164,11 +164,11 @@ class _brandDetailState extends State<brandDetail> {
     /// Hero animation for image
     final hero = Hero(
       tag: 'hero-tag-${brand.id}',
-      child: new DecoratedBox(
-        decoration: new BoxDecoration(
-          image: new DecorationImage(
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          image: DecorationImage(
             fit: BoxFit.cover,
-            image: new AssetImage(brand.img),
+            image: AssetImage(brand.img),
           ),
           shape: BoxShape.rectangle,
         ),
@@ -177,8 +177,8 @@ class _brandDetailState extends State<brandDetail> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
                 colors: <Color>[
-                  new Color(0x00FFFFFF),
-                  new Color(0xFFFFFFFF),
+                  Color(0x00FFFFFF),
+                  Color(0xFFFFFFFF),
                 ],
                 stops: [
                   0.0,
@@ -257,7 +257,7 @@ class _brandDetailState extends State<brandDetail> {
                               ontap: () {
                                 Navigator.of(context).push(PageRouteBuilder(
                                     pageBuilder: (_, __, ___) =>
-                                        new privatemessage(brand)));
+                                        privatemessage(brand)));
                               },
                             ),
                             Padding(padding: EdgeInsets.only(top: 10.0)),

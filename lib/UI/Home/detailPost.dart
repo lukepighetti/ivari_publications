@@ -25,7 +25,7 @@ class detailPost extends StatelessWidget {
                 child: InkWell(
                     onTap: () {
                       Navigator.of(context).pushReplacement(PageRouteBuilder(
-                          pageBuilder: (_, __, ___) => new home()));
+                          pageBuilder: (_, __, ___) => home()));
                     },
                     child: Icon(
                       Icons.arrow_back,
@@ -38,7 +38,7 @@ class detailPost extends StatelessWidget {
                   child: Container(
                     height: 150.0,
                     width: 115.0,
-                    child: new FadeInImage.memoryNetwork(
+                    child: FadeInImage.memoryNetwork(
                       placeholder: kTransparentImage,
                       image: post["featured_media"] == 0
                           ? 'images/placeholder.png'
@@ -60,8 +60,8 @@ class detailPost extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 35.0, left: 25.0, right: 25.0),
             child: Column(children: <Widget>[
-              new Text(post['content']['rendered']
-                  .replaceAll(new RegExp(r'<[^>]*>'), ''))
+              Text(post['content']['rendered']
+                  .replaceAll(RegExp(r'<[^>]*>'), ''))
             ]),
           ),
         ]),

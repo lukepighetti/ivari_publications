@@ -7,22 +7,21 @@ class detailPosting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(post['title']['rendered']),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(post['title']['rendered']),
       ),
-      body: new Padding(
+      body: Padding(
         padding: EdgeInsets.all(16.0),
-        child: new ListView(
+        child: ListView(
           children: <Widget>[
-            new FadeInImage.memoryNetwork(
+            FadeInImage.memoryNetwork(
               placeholder: kTransparentImage,
               image: post["featured_media"] == 0
                   ? 'images/placeholder.png'
                   : post["_embedded"]["wp:featuredmedia"][0]["source_url"],
             ),
-            new Text(post['content']['rendered']
-                .replaceAll(new RegExp(r'<[^>]*>'), ''))
+            Text(post['content']['rendered'].replaceAll(RegExp(r'<[^>]*>'), ''))
           ],
         ),
       ),

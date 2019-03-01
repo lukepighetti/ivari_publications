@@ -121,7 +121,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/notification.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => new notification()));
+                            pageBuilder: (_, __, ___) => notification()));
                       },
                     ),
                     Padding(
@@ -138,8 +138,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/creditAcount.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) =>
-                                new creditCardSetting()));
+                            pageBuilder: (_, __, ___) => creditCardSetting()));
                       },
                     ),
                     Padding(
@@ -156,7 +155,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/chat.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => new chat()));
+                            pageBuilder: (_, __, ___) => chat()));
                       },
                     ),
                     Padding(
@@ -173,7 +172,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/truck.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => new order()));
+                            pageBuilder: (_, __, ___) => order()));
                       },
                     ),
                     Padding(
@@ -190,7 +189,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/setting.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => new settingAcount()));
+                            pageBuilder: (_, __, ___) => settingAcount()));
                       },
                     ),
                     Padding(
@@ -207,7 +206,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/callcenter.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => new callCenter()));
+                            pageBuilder: (_, __, ___) => callCenter()));
                       },
                     ),
                     Padding(
@@ -224,7 +223,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/aboutapp.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => new aboutApps()));
+                            pageBuilder: (_, __, ___) => aboutApps()));
                       },
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 20.0)),

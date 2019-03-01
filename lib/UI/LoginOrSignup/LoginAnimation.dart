@@ -5,7 +5,7 @@ import 'package:info_apps_flutter/UI/Home/home.dart';
 class LoginAnimation extends StatefulWidget {
   /// To set type animation and  start and end animation
   LoginAnimation({Key key, this.animationController})
-      : animation = new Tween(
+      : animation = Tween(
           end: 900.0,
           begin: 70.0,
         ).animate(CurvedAnimation(
@@ -41,11 +41,11 @@ class _LoginAnimationState extends State<LoginAnimation> {
     widget.animationController.addListener(() {
       if (widget.animation.isCompleted) {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => new home()));
+            MaterialPageRoute(builder: (BuildContext context) => home()));
       }
     });
 
-    return new AnimatedBuilder(
+    return AnimatedBuilder(
       animation: widget.animationController,
       builder: widget._buildAnimation,
     );

@@ -296,7 +296,7 @@ class _SignUpColumnState extends State<SignUpColumn>
             padding: EdgeInsets.only(top: 20.0),
             onPressed: () async {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (BuildContext context) => new loginScreen()));
+                  builder: (BuildContext context) => loginScreen()));
             },
             child: Text(
               "Already have an account? Sign In",
@@ -354,7 +354,7 @@ class _SignUpColumnState extends State<SignUpColumn>
                 },
                 child: ButtonBlackBottom(),
               )
-            : new LoginAnimation(
+            : LoginAnimation(
                 animationController: sanimationController.view,
               )
       ],

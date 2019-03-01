@@ -176,7 +176,7 @@ class _loginScreenState extends State<loginScreen>
                                   Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              new Signup()));
+                                              Signup()));
                                 },
                                 child: Text(
                                   "Don't have an account? Sign Up",
@@ -216,7 +216,7 @@ class _loginScreenState extends State<loginScreen>
                             setState(() {
                               tap = 1;
                             });
-                            new LoginAnimation(
+                            LoginAnimation(
                               animationController: sanimationController.view,
                             );
                             _PlayAnimation();
@@ -224,7 +224,7 @@ class _loginScreenState extends State<loginScreen>
                           },
                           child: buttonBlackBottom(),
                         )
-                      : new LoginAnimation(
+                      : LoginAnimation(
                           animationController: sanimationController.view,
                         )
                 ],

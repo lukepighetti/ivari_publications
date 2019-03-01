@@ -7,7 +7,7 @@ class notification extends StatefulWidget {
 }
 
 class _notificationState extends State<notification> {
-  final List<Post> items = new List();
+  final List<Post> items = List();
   @override
   void initState() {
     super.initState();
@@ -96,7 +96,7 @@ class _notificationState extends State<notification> {
                                   width: 440.0,
                                   child: Text(
                                     '${items[position].desc}',
-                                    style: new TextStyle(
+                                    style: TextStyle(
                                         fontSize: 15.0,
                                         fontStyle: FontStyle.italic,
                                         color: Colors.black38),
@@ -132,7 +132,7 @@ class _notificationState extends State<notification> {
 
 void _onTapItem(BuildContext context, Post post) {
   Scaffold.of(context).showSnackBar(
-      new SnackBar(content: new Text(post.id.toString() + ' - ' + post.title)));
+      SnackBar(content: Text(post.id.toString() + ' - ' + post.title)));
 }
 
 class noItemNotifications extends StatelessWidget {

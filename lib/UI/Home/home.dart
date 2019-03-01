@@ -91,7 +91,7 @@ class _homeState extends State<home> {
     /// ImageSlider in header
     var imageSlider = Container(
       height: 182.0,
-      child: new Carousel(
+      child: Carousel(
         boxFit: BoxFit.cover,
         dotColor: Color(0xFF6991C7).withOpacity(0.8),
         dotSize: 5.5,
@@ -175,8 +175,8 @@ class _homeState extends State<home> {
                 InkWell(
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => new form()));
+                    Navigator.of(context).push(
+                        PageRouteBuilder(pageBuilder: (_, __, ___) => form()));
                   },
                   child: Text("Forms",
                       style: TextStyle(
@@ -193,8 +193,8 @@ class _homeState extends State<home> {
                 InkWell(
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => new brand()));
+                    Navigator.of(context).push(
+                        PageRouteBuilder(pageBuilder: (_, __, ___) => brand()));
                   },
                   child: Text("Categorie Brand",
                       style: TextStyle(
@@ -211,8 +211,8 @@ class _homeState extends State<home> {
                 InkWell(
                   onTap: () {
                     Navigator.of(context).pop();
-                    Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => new help()));
+                    Navigator.of(context).push(
+                        PageRouteBuilder(pageBuilder: (_, __, ___) => help()));
                   },
                   child: Text("webCappow",
                       style: TextStyle(
@@ -229,8 +229,8 @@ class _homeState extends State<home> {
                 InkWell(
                   onTap: () {
                     Navigator.of(context).pop();
-                    Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => new about()));
+                    Navigator.of(context).push(
+                        PageRouteBuilder(pageBuilder: (_, __, ___) => about()));
                   },
                   child: Text("About",
                       style: TextStyle(
@@ -248,7 +248,7 @@ class _homeState extends State<home> {
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => new profil()));
+                        pageBuilder: (_, __, ___) => profil()));
                   },
                   child: Text("Profile",
                       style: TextStyle(
@@ -266,7 +266,7 @@ class _homeState extends State<home> {
                   onTap: () {
                     Navigator.of(context).pop();
                     Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => new french()));
+                        pageBuilder: (_, __, ___) => french()));
                   },
                   child: Text("French",
                       style: TextStyle(
@@ -318,7 +318,7 @@ class _homeState extends State<home> {
                       onTap: () {
                         Navigator.of(context).push(PageRouteBuilder(
                             pageBuilder: (_, __, ___) =>
-                                new detailPost(post: posts[index])));
+                                detailPost(post: posts[index])));
                       },
                       child: Container(
                         width: 110.0,
@@ -329,7 +329,7 @@ class _homeState extends State<home> {
                             Container(
                               height: 150.0,
                               width: 100.0,
-                              child: new FadeInImage.memoryNetwork(
+                              child: FadeInImage.memoryNetwork(
                                 placeholder: kTransparentImage,
                                 image: posts[index]["featured_media"] == null
                                     ? Container()
@@ -338,7 +338,7 @@ class _homeState extends State<home> {
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            new Padding(
+                            Padding(
                               padding: EdgeInsets.only(top: 10.0),
                               child: Text(posts[index]["title"]["rendered"]),
                             )
@@ -373,7 +373,7 @@ class _homeState extends State<home> {
                       onTap: () {
                         Navigator.of(context).push(PageRouteBuilder(
                             pageBuilder: (_, __, ___) =>
-                                new detailPost(post: posts[index])));
+                                detailPost(post: posts[index])));
                       },
                       child: Container(
                         width: 110.0,
@@ -384,7 +384,7 @@ class _homeState extends State<home> {
                             Container(
                               height: 150.0,
                               width: 100.0,
-                              child: new FadeInImage.memoryNetwork(
+                              child: FadeInImage.memoryNetwork(
                                 placeholder: kTransparentImage,
                                 image: posts[index]["featured_media"] == null
                                     ? Container()
@@ -393,7 +393,7 @@ class _homeState extends State<home> {
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            new Padding(
+                            Padding(
                               padding: EdgeInsets.only(top: 10.0),
                               child: Text(posts[index]["title"]["rendered"]),
                             )
@@ -429,7 +429,7 @@ class _homeState extends State<home> {
                       onTap: () {
                         Navigator.of(context).push(PageRouteBuilder(
                             pageBuilder: (_, __, ___) =>
-                                new detailPost(post: posts[index])));
+                                detailPost(post: posts[index])));
                       },
                       child: Container(
                         width: 110.0,
@@ -440,7 +440,7 @@ class _homeState extends State<home> {
                             Container(
                               height: 150.0,
                               width: 100.0,
-                              child: new FadeInImage.memoryNetwork(
+                              child: FadeInImage.memoryNetwork(
                                 placeholder: kTransparentImage,
                                 image: posts[index]["featured_media"] == null
                                     ? Container()
@@ -449,7 +449,7 @@ class _homeState extends State<home> {
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            new Padding(
+                            Padding(
                               padding: EdgeInsets.only(top: 10.0),
                               //child: Text(posts[index]["title"]["rendered"]),
                             )

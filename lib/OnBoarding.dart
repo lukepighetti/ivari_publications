@@ -25,7 +25,7 @@ var _fontDescriptionStyle = TextStyle(
 /// Page View Model for on boarding
 ///
 final pages = [
-  new PageViewModel(
+  PageViewModel(
       pageColor: Colors.white,
       iconColor: Colors.black,
       bubbleBackgroundColor: Colors.black,
@@ -41,7 +41,7 @@ final pages = [
         width: 285.0,
         alignment: Alignment.center,
       )),
-  new PageViewModel(
+  PageViewModel(
       pageColor: Colors.white,
       iconColor: Colors.black,
       bubbleBackgroundColor: Colors.black,
@@ -59,7 +59,7 @@ final pages = [
         width: 285.0,
         alignment: Alignment.center,
       )),
-  new PageViewModel(
+  PageViewModel(
       pageColor: Colors.white,
       iconColor: Colors.black,
       bubbleBackgroundColor: Colors.black,
@@ -101,7 +101,7 @@ class _onBoardingState extends State<onBoarding> {
       ),
       onTapDoneButton: () {
         Navigator.of(context).pushReplacement(PageRouteBuilder(
-          pageBuilder: (_, __, ___) => new loginScreen(),
+          pageBuilder: (_, __, ___) => loginScreen(),
           transitionsBuilder:
               (_, Animation<double> animation, __, Widget widget) {
             return Opacity(

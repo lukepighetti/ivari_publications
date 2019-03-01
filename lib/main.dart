@@ -23,7 +23,7 @@ class myApp extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
       statusBarColor: Colors.transparent, //or set color with: Color(0xFF0000FF)
     ));
-    return new MaterialApp(
+    return MaterialApp(
       title: "ivari Publications",
       theme: ThemeData(
           brightness: Brightness.light,
@@ -37,7 +37,7 @@ class myApp extends StatelessWidget {
       /// Move splash screen to ChoseLogin Layout
       /// Routes
       routes: <String, WidgetBuilder>{
-        "login": (BuildContext context) => new onBoarding()
+        "login": (BuildContext context) => onBoarding()
       },
     );
   }
@@ -53,7 +53,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   /// Setting duration in splash screen
   startTime() async {
-    return new Timer(Duration(milliseconds: 4500), NavigatorPage);
+    return Timer(Duration(milliseconds: 4500), NavigatorPage);
   }
 
   /// To navigate layout change

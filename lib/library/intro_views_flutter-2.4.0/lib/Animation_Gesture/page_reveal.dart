@@ -13,8 +13,8 @@ class PageReveal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //ClipOval cuts the page to circular shape.
-    return new ClipOval(
-      clipper: new CircularRevealClipper(revealPercent: revealPercent),
+    return ClipOval(
+      clipper: CircularRevealClipper(revealPercent: revealPercent),
       child: child,
     );
   }

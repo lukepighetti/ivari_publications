@@ -17,7 +17,7 @@ const String defaultUserName = "Alisa Heart";
 class _privatemessageState extends State<privatemessage>
     with TickerProviderStateMixin {
   final List<Msg> _messages = <Msg>[];
-  final TextEditingController _textController = new TextEditingController();
+  final TextEditingController _textController = TextEditingController();
   bool _isWriting = false;
 
   /// Declare Brand class
@@ -38,23 +38,23 @@ class _privatemessageState extends State<privatemessage>
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
-      body: new Column(children: <Widget>[
-        new Flexible(
+      body: Column(children: <Widget>[
+        Flexible(
           child: _messages.length > 0
               ? Container(
-                  child: new ListView.builder(
+                  child: ListView.builder(
                     itemBuilder: (_, int index) => _messages[index],
                     itemCount: _messages.length,
                     reverse: true,
-                    padding: new EdgeInsets.all(10.0),
+                    padding: EdgeInsets.all(10.0),
                   ),
                 )
               : NoMessage(),
         ),
-        new Divider(height: 1.5),
-        new Container(
+        Divider(height: 1.5),
+        Container(
           child: _buildComposer(),
-          decoration: new BoxDecoration(
+          decoration: BoxDecoration(
               color: Theme.of(ctx).cardColor,
               boxShadow: [BoxShadow(blurRadius: 1.0, color: Colors.black12)]),
         ),
@@ -64,16 +64,16 @@ class _privatemessageState extends State<privatemessage>
 
   /// Component for typing text
   Widget _buildComposer() {
-    return new IconTheme(
-      data: new IconThemeData(color: Theme.of(context).accentColor),
-      child: new Container(
+    return IconTheme(
+      data: IconThemeData(color: Theme.of(context).accentColor),
+      child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 9.0),
-          child: new Row(
+          child: Row(
             children: <Widget>[
-              new Flexible(
+              Flexible(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 5.0),
-                  child: new TextField(
+                  child: TextField(
                     controller: _textController,
                     onChanged: (String txt) {
                       setState(() {
@@ -81,7 +81,7 @@ class _privatemessageState extends State<privatemessage>
                       });
                     },
                     onSubmitted: _submitMsg,
-                    decoration: new InputDecoration.collapsed(
+                    decoration: InputDecoration.collapsed(
                         hintText: "Enter some text to send a message",
                         hintStyle: TextStyle(
                             fontFamily: "Sans",
@@ -90,16 +90,16 @@ class _privatemessageState extends State<privatemessage>
                   ),
                 ),
               ),
-              new Container(
-                  margin: new EdgeInsets.symmetric(horizontal: 3.0),
+              Container(
+                  margin: EdgeInsets.symmetric(horizontal: 3.0),
                   child: Theme.of(context).platform == TargetPlatform.iOS
-                      ? new CupertinoButton(
-                          child: new Text("Submit"),
+                      ? CupertinoButton(
+                          child: Text("Submit"),
                           onPressed: _isWriting
                               ? () => _submitMsg(_textController.text)
                               : null)
-                      : new IconButton(
-                          icon: new Icon(Icons.message),
+                      : IconButton(
+                          icon: Icon(Icons.message),
                           onPressed: _isWriting
                               ? () => _submitMsg(_textController.text)
                               : null,
@@ -107,8 +107,8 @@ class _privatemessageState extends State<privatemessage>
             ],
           ),
           decoration: Theme.of(context).platform == TargetPlatform.iOS
-              ? new BoxDecoration(
-                  border: new Border(top: new BorderSide(color: Colors.brown)))
+              ? BoxDecoration(
+                  border: Border(top: BorderSide(color: Colors.brown)))
               : null),
     );
   }
@@ -118,10 +118,10 @@ class _privatemessageState extends State<privatemessage>
     setState(() {
       _isWriting = false;
     });
-    Msg msg = new Msg(
+    Msg msg = Msg(
       txt: txt,
-      animationController: new AnimationController(
-          vsync: this, duration: new Duration(milliseconds: 800)),
+      animationController: AnimationController(
+          vsync: this, duration: Duration(milliseconds: 800)),
     );
     setState(() {
       _messages.insert(0, msg);
@@ -146,31 +146,31 @@ class Msg extends StatelessWidget {
 
   @override
   Widget build(BuildContext ctx) {
-    return new SizeTransition(
-      sizeFactor: new CurvedAnimation(
+    return SizeTransition(
+      sizeFactor: CurvedAnimation(
           parent: animationController, curve: Curves.fastOutSlowIn),
       axisAlignment: 0.0,
-      child: new Container(
+      child: Container(
         margin: const EdgeInsets.symmetric(vertical: 8.0),
-        child: new Row(
+        child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            new Container(
+            Container(
               margin: const EdgeInsets.only(right: 18.0),
-              child: new CircleAvatar(
+              child: CircleAvatar(
                   backgroundColor: Colors.indigoAccent,
-                  child: new Text(defaultUserName[0])),
+                  child: Text(defaultUserName[0])),
             ),
-            new Expanded(
-              child: new Column(
+            Expanded(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  new Text(defaultUserName,
+                  Text(defaultUserName,
                       style: TextStyle(
                           fontFamily: "Gotik", fontWeight: FontWeight.w900)),
-                  new Container(
+                  Container(
                     margin: const EdgeInsets.only(top: 6.0),
-                    child: new Text(txt),
+                    child: Text(txt),
                   ),
                 ],
               ),
