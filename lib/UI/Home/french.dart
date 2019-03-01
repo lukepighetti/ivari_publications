@@ -8,9 +8,7 @@ class french extends StatefulWidget {
 class _frenchState extends State<french> {
   @override
   Widget build(BuildContext context) {
-    setState(() {
-
-    });
+    setState(() {});
     return WebviewScaffold(
       appBar: AppBar(
         elevation: 0.0,
@@ -18,7 +16,6 @@ class _frenchState extends State<french> {
         centerTitle: true,
       ),
       url: "https://bkgapp.ivari.ca/publications/",
-
     );
   }
 }

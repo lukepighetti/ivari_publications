@@ -24,11 +24,11 @@ class items {
 
   const items(
       {this.itemName,
-        this.itemPrice,
-        this.itemRatting,
-        this.itemSale,
-        this.itemId,
-        this.itemImg});
+      this.itemPrice,
+      this.itemRatting,
+      this.itemSale,
+      this.itemId,
+      this.itemImg});
 }
 
 List<Brand> brandData = [
@@ -37,7 +37,7 @@ List<Brand> brandData = [
       id: "1",
       img: "assets/imgBrand/nikeHeader.png",
       desc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       item: items(
           itemImg: "assets/imgBrand/brandNike.jpg",
           itemId: "1",
@@ -50,7 +50,7 @@ List<Brand> brandData = [
       id: "2",
       img: "assets/imgBrand/appleHeader.png",
       desc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       item: items(
           itemImg: "assets/imgBrand/brandApple.jpg",
           itemId: "1",
@@ -63,7 +63,7 @@ List<Brand> brandData = [
       id: "3",
       img: "assets/imgBrand/fendiHeader.png",
       desc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       item: items(
           itemImg: "assets/imgItem/fashion1.jpg",
           itemId: "1",
@@ -76,7 +76,7 @@ List<Brand> brandData = [
       id: "4",
       img: "assets/imgBrand/gucciHeader.png",
       desc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       item: items(
           itemImg: "assets/imgItem/flashsale2.jpg",
           itemId: "1",
@@ -89,7 +89,7 @@ List<Brand> brandData = [
       id: "5",
       img: "assets/imgBrand/samsungHeader.png",
       desc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       item: items(
           itemImg: "assets/imgPromo/imgPromo2.jpg",
           itemId: "1",
@@ -102,7 +102,7 @@ List<Brand> brandData = [
       id: "6",
       img: "assets/imgBrand/sonyHeader.png",
       desc:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       item: items(
           itemImg: "assets/imgPromo/imgPromo8.jpg",
           itemId: "1",

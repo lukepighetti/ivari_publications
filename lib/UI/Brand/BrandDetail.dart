@@ -5,6 +5,7 @@ import 'package:info_apps_flutter/UI/Home/home.dart';
 
 class brandDetail extends StatefulWidget {
   @override
+
   /// Get data from BrandDataList.dart (List Item)
   /// Declare class
   final Brand brand;
@@ -15,8 +16,6 @@ class brandDetail extends StatefulWidget {
 class _brandDetailState extends State<brandDetail> {
   /// set key for bottom sheet
   final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
-
-
 
   /// Get data from BrandDataList.dart (List Item)
   /// Declare class
@@ -158,7 +157,6 @@ class _brandDetailState extends State<brandDetail> {
         });
   }
 
-
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
@@ -277,7 +275,8 @@ class _brandDetailState extends State<brandDetail> {
                                             notif = "Notificated";
                                           } else {
                                             (notif = "Notifications");
-                                          }});
+                                          }
+                                        });
                                       }),
                                 );
                                 setState(() {
@@ -285,7 +284,8 @@ class _brandDetailState extends State<brandDetail> {
                                     notif = "Notificated";
                                   } else {
                                     (notif = "Notifications");
-                                  }});
+                                  }
+                                });
                                 _key.currentState.showSnackBar(snackBar);
                               },
                             )
@@ -459,6 +459,7 @@ class _brandDetailState extends State<brandDetail> {
               },
               childCount: 20,
             ),
+
             /// Setting Size for Grid Item
             gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 250.0,

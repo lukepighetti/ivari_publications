@@ -6,6 +6,7 @@ import 'package:info_apps_flutter/UI/Profile/Message.dart';
 import 'package:info_apps_flutter/UI/Profile/MyOrders.dart';
 import 'package:info_apps_flutter/UI/Profile/Notification.dart';
 import 'package:info_apps_flutter/UI/Profile/SettingAcount.dart';
+
 class profil extends StatefulWidget {
   @override
   _profilState createState() => _profilState();
@@ -35,60 +36,56 @@ class _profilState extends State<profil> {
 
     /// To Sett PhotoProfile,Name and Edit Profile
     var _profile = Padding(
-      padding:  EdgeInsets.only(top: 185.0, ),
+      padding: EdgeInsets.only(
+        top: 185.0,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Container(
-
-          ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              height: 100.0,
-              width: 100.0,
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white, width: 2.5),
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                      image: AssetImage("assets/img/womanface.jpg"))),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 5.0),
-              child: Text(
-                "Alisa Heart",
-                style: _txtName,
+          Container(),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                height: 100.0,
+                width: 100.0,
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white, width: 2.5),
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                        image: AssetImage("assets/img/womanface.jpg"))),
               ),
-            ),
-            InkWell(
-              onTap: null,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 0.0),
+              Padding(
+                padding: const EdgeInsets.only(top: 5.0),
                 child: Text(
-                  "Edit Profile",
-                  style: _txtEdit,
+                  "Alisa Heart",
+                  style: _txtName,
                 ),
               ),
-            ),
-          ],
-        ),
-        Container(
-
-        ),
-      ],
+              InkWell(
+                onTap: null,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 0.0),
+                  child: Text(
+                    "Edit Profile",
+                    style: _txtEdit,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Container(),
+        ],
       ),
     );
 
     return Scaffold(
-          body: SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Container(
           color: Colors.white,
           child: Stack(
-          
             children: <Widget>[
-           
               /// Setting Header Banner
               Container(
                 height: 240.0,
@@ -98,14 +95,17 @@ class _profilState extends State<profil> {
                         fit: BoxFit.cover)),
               ),
 
-   Padding(
-              padding: const EdgeInsets.only(top:35.0,left: 15.0),
-              child: InkWell(
-                onTap: (){
-                  Navigator.of(context).pop();
-                },
-                child: Icon(Icons.arrow_back,color: Colors.white,)),
-            ),
+              Padding(
+                padding: const EdgeInsets.only(top: 35.0, left: 15.0),
+                child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                    )),
+              ),
 
               /// Calling _profile variable
               _profile,

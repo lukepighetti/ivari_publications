@@ -6,7 +6,6 @@ class order extends StatefulWidget {
 }
 
 class _orderState extends State<order> {
-
   static var _txtCustom = TextStyle(
     color: Colors.black54,
     fontSize: 15.0,

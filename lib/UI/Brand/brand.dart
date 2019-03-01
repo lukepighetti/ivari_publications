@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/ListItem/BrandDataList.dart';
 import 'package:info_apps_flutter/UI/Brand/BrandDetail.dart';
 import 'package:info_apps_flutter/UI/Brand/Search.dart';
+
 class brand extends StatefulWidget {
   @override
   _brandState createState() => _brandState();
@@ -46,7 +47,8 @@ class _brandState extends State<brand> {
     return Padding(
       padding: const EdgeInsets.only(top: 8.0),
       child: Scaffold(
-        /// Calling variable appbar
+
+          /// Calling variable appbar
           appBar: _appbar,
           body: Container(
             color: Colors.white,
@@ -58,8 +60,9 @@ class _brandState extends State<brand> {
                   sliver: SliverFixedExtentList(
                       itemExtent: 145.0,
                       delegate: SliverChildBuilderDelegate(
-                        /// Calling itemCard Class for constructor card
-                              (context, index) => itemCard(brandData[index]),
+
+                          /// Calling itemCard Class for constructor card
+                          (context, index) => itemCard(brandData[index]),
                           childCount: brandData.length)),
                 ),
               ],
@@ -79,7 +82,7 @@ class itemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-      const EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0, bottom: 5.0),
+          const EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0, bottom: 5.0),
       child: InkWell(
         onTap: () {
           Navigator.of(context).push(

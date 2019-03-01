@@ -1,4 +1,3 @@
-
 import 'package:info_apps_flutter/Library/intro_views_flutter-2.4.0/lib/Constants/constants.dart';
 
 /// This is view model for the skip and done buttons.

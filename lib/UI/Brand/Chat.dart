@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/ListItem/BrandDataList.dart';
 
 class privatemessage extends StatefulWidget {
-
   /// Declare Brand class and Get Data Name for Appbar (BrandDataList.dart)
   final Brand brand;
   privatemessage(this.brand);
@@ -41,15 +40,16 @@ class _privatemessageState extends State<privatemessage>
       ),
       body: new Column(children: <Widget>[
         new Flexible(
-          child: _messages.length>0
-              ?  Container(
-            child: new ListView.builder(
-              itemBuilder: (_, int index) => _messages[index],
-              itemCount: _messages.length,
-              reverse: true,
-              padding: new EdgeInsets.all(10.0),
-            ),
-          ): NoMessage(),
+          child: _messages.length > 0
+              ? Container(
+                  child: new ListView.builder(
+                    itemBuilder: (_, int index) => _messages[index],
+                    itemCount: _messages.length,
+                    reverse: true,
+                    padding: new EdgeInsets.all(10.0),
+                  ),
+                )
+              : NoMessage(),
         ),
         new Divider(height: 1.5),
         new Container(
@@ -182,23 +182,31 @@ class Msg extends StatelessWidget {
   }
 }
 
-
-
 class NoMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
         child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Opacity(
-                  opacity: 0.5,
-                  child: Image.asset("assets/imgIllustration/IlustrasiMessage.png",height: 220.0,)),
-              Text("Not Have Message", style: TextStyle( fontWeight: FontWeight.w300,color: Colors.black12,fontSize: 17.0,fontFamily: "Popins"),)
-            ],
-          ),
-        ));
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Opacity(
+              opacity: 0.5,
+              child: Image.asset(
+                "assets/imgIllustration/IlustrasiMessage.png",
+                height: 220.0,
+              )),
+          Text(
+            "Not Have Message",
+            style: TextStyle(
+                fontWeight: FontWeight.w300,
+                color: Colors.black12,
+                fontSize: 17.0,
+                fontFamily: "Popins"),
+          )
+        ],
+      ),
+    ));
   }
 }

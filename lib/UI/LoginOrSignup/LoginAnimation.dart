@@ -35,12 +35,13 @@ class LoginAnimation extends StatefulWidget {
 
 class _LoginAnimationState extends State<LoginAnimation> {
   @override
+
   /// To navigation after animation complete
   Widget build(BuildContext context) {
     widget.animationController.addListener(() {
       if (widget.animation.isCompleted) {
-        Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => new home()));
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (BuildContext context) => new home()));
       }
     });
 

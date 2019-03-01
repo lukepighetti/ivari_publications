@@ -7,10 +7,8 @@ class help extends StatefulWidget {
 
 class _helpState extends State<help> {
   @override
-Widget build(BuildContext context) {
-    setState(() {
-
-    });
+  Widget build(BuildContext context) {
+    setState(() {});
     return WebviewScaffold(
       appBar: AppBar(
         elevation: 0.0,
@@ -18,7 +16,6 @@ Widget build(BuildContext context) {
         centerTitle: true,
       ),
       url: "https://secure.ivari.ca/_forms/ezlogin.aspx/",
-
     );
   }
 }

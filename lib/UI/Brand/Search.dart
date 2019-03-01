@@ -43,7 +43,7 @@ class _searchAppbarState extends State<searchAppbar> {
             data: ThemeData(hintColor: Colors.transparent),
             child: TextFormField(
               decoration: InputDecoration(
-                border: InputBorder.none,
+                  border: InputBorder.none,
                   icon: Icon(
                     Icons.search,
                     color: Color(0xFF6991C7),
@@ -122,7 +122,7 @@ class _searchAppbarState extends State<searchAppbar> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.only(left: 20.0,top: 20.0),
+          padding: const EdgeInsets.only(left: 20.0, top: 20.0),
           child: Text(
             "Populer Keyword",
             style: TextStyle(fontFamily: "Gotik", color: Colors.black26),
@@ -208,7 +208,7 @@ class KeywordItem extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.only(top:4.0,left: 3.0),
+          padding: const EdgeInsets.only(top: 4.0, left: 3.0),
           child: Container(
             height: 29.5,
             width: 90.0,
@@ -272,7 +272,7 @@ class FavoriteItem extends StatelessWidget {
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     return Padding(
-      padding: const EdgeInsets.only(left:2.0),
+      padding: const EdgeInsets.only(left: 2.0),
       child: Container(
         decoration: BoxDecoration(
             color: Colors.white,

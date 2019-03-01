@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 class chatItem extends StatefulWidget {
   @override
   _chatItemState createState() => _chatItemState();
@@ -33,16 +34,18 @@ class _chatItemState extends State<chatItem> with TickerProviderStateMixin {
         color: Colors.white,
         child: new Column(children: <Widget>[
           new Flexible(
-            child: _messages.length>0
-                ?  Container(
+            child: _messages.length > 0
+                ? Container(
                     child: new ListView.builder(
                       itemBuilder: (_, int index) => _messages[index],
                       itemCount: _messages.length,
                       reverse: true,
                       padding: new EdgeInsets.all(10.0),
                     ),
-                  ): NoMessage(),
+                  )
+                : NoMessage(),
           ),
+
           /// Line
           new Divider(height: 1.5),
           new Container(
@@ -64,14 +67,17 @@ class _chatItemState extends State<chatItem> with TickerProviderStateMixin {
           margin: const EdgeInsets.symmetric(horizontal: 9.0),
           child: new Row(
             children: <Widget>[
-              Icon(Icons.add,color: Colors.blueAccent,size: 27.0,),
+              Icon(
+                Icons.add,
+                color: Colors.blueAccent,
+                size: 27.0,
+              ),
               new Flexible(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 5.0),
                   child: Container(
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.black12),
-
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -98,16 +104,16 @@ class _chatItemState extends State<chatItem> with TickerProviderStateMixin {
                   margin: new EdgeInsets.symmetric(horizontal: 3.0),
                   child: Theme.of(context).platform == TargetPlatform.iOS
                       ? new CupertinoButton(
-                      child: new Text("Submit"),
-                      onPressed: _isWriting
-                          ? () => _submitMsg(_textController.text)
-                          : null)
+                          child: new Text("Submit"),
+                          onPressed: _isWriting
+                              ? () => _submitMsg(_textController.text)
+                              : null)
                       : new IconButton(
-                    icon: new Icon(Icons.message),
-                    onPressed: _isWriting
-                        ? () => _submitMsg(_textController.text)
-                        : null,
-                  )),
+                          icon: new Icon(Icons.message),
+                          onPressed: _isWriting
+                              ? () => _submitMsg(_textController.text)
+                              : null,
+                        )),
             ],
           ),
           decoration: Theme.of(context).platform == TargetPlatform.iOS
@@ -167,11 +173,18 @@ class Msg extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(bottomRight: Radius.circular(1.0),bottomLeft:Radius.circular(20.0),topRight:Radius.circular(20.0),topLeft:Radius.circular(20.0)),
+                        borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(1.0),
+                            bottomLeft: Radius.circular(20.0),
+                            topRight: Radius.circular(20.0),
+                            topLeft: Radius.circular(20.0)),
                         color: Color(0xFF6991C7).withOpacity(0.6),
                       ),
                       padding: const EdgeInsets.all(10.0),
-                      child: new Text(txt,style: TextStyle(color: Colors.white),),
+                      child: new Text(
+                        txt,
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ),
                   ],
                 ),
@@ -200,14 +213,25 @@ class NoMessage extends StatelessWidget {
       child: ListView(
         children: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(top:100.0),
+            padding: const EdgeInsets.only(top: 100.0),
             child: Center(
               child: Opacity(
-                opacity: 0.5,
-                  child: Image.asset("assets/imgIllustration/IlustrasiMessage.png",height: 220.0,)),
+                  opacity: 0.5,
+                  child: Image.asset(
+                    "assets/imgIllustration/IlustrasiMessage.png",
+                    height: 220.0,
+                  )),
             ),
           ),
-          Center(child: Text("Not Have Message", style: TextStyle( fontWeight: FontWeight.w300,color: Colors.black12,fontSize: 17.0,fontFamily: "Popins"),))
+          Center(
+              child: Text(
+            "Not Have Message",
+            style: TextStyle(
+                fontWeight: FontWeight.w300,
+                color: Colors.black12,
+                fontSize: 17.0,
+                fontFamily: "Popins"),
+          ))
         ],
       ),
     ));

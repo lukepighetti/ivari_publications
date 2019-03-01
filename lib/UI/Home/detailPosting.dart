@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class detailPosting extends StatelessWidget {
- 
-   var post;
+  var post;
   detailPosting({Key key, @required var this.post}) : super(key: key);
 
   @override
@@ -22,7 +21,8 @@ class detailPosting extends StatelessWidget {
                   ? 'images/placeholder.png'
                   : post["_embedded"]["wp:featuredmedia"][0]["source_url"],
             ),
-            new Text(post['content']['rendered'].replaceAll(new RegExp(r'<[^>]*>'), ''))
+            new Text(post['content']['rendered']
+                .replaceAll(new RegExp(r'<[^>]*>'), ''))
           ],
         ),
       ),

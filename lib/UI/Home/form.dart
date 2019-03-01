@@ -7,10 +7,8 @@ class form extends StatefulWidget {
 
 class _formState extends State<form> {
   @override
- Widget build(BuildContext context) {
-    setState(() {
-
-    });
+  Widget build(BuildContext context) {
+    setState(() {});
     return WebviewScaffold(
       appBar: AppBar(
         elevation: 0.0,
@@ -18,7 +16,6 @@ class _formState extends State<form> {
         centerTitle: true,
       ),
       url: "https://ivari.ca/tools-and-resources/administration/",
-
     );
   }
 }

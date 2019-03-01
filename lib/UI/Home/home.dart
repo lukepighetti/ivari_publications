@@ -20,18 +20,17 @@ import 'package:flutter/foundation.dart';
 
 //  String urlApi = "https://saiberart.com/pub/wp-json/wp/v2/posts";
 
+String urlApi = "https://saiberart.com/pub/wp-json/wp/v2/";
 
- String urlApi = "https://saiberart.com/pub/wp-json/wp/v2/";
+List<itemSlider> parseitemSlider(String responeBody) {
+  final parse = json.decode(responeBody).cast<Map<String, dynamic>>();
+  return parse.map<itemSlider>((json) => itemSlider.fromJson(json)).toList();
+}
 
-  List<itemSlider> parseitemSlider(String responeBody){
-    final parse = json.decode(responeBody).cast<Map<String, dynamic>>();
-    return parse.map<itemSlider>((json)=> itemSlider.fromJson(json)).toList();
-  }
-
-  Future<List<itemSlider>> fetchitemSliders(http.Client client) async {
-    final respone = await client.get(urlApi);
-    return compute(parseitemSlider, respone.body);
-  }
+Future<List<itemSlider>> fetchitemSliders(http.Client client) async {
+  final respone = await client.get(urlApi);
+  return compute(parseitemSlider, respone.body);
+}
 
 class home extends StatefulWidget {
   _homeState createState() => _homeState();
@@ -39,17 +38,17 @@ class home extends StatefulWidget {
 
 class _homeState extends State<home> {
   /// To set duration initState auto start if FlashSale Layout open
- List posts;
- 
- List<itemSlider> item;
- 
-   // Base URL for our wordpress API
+  List posts;
+
+  List<itemSlider> item;
+
+  // Base URL for our wordpress API
   final String apiUrl = "https://saiberart.com/pub/wp-json/wp/v2/";
 
   // Function to fetch list of posts
-   Future<String> getPosts() async {
-
-    var res = await http.get(Uri.encodeFull(apiUrl + "posts?_embed"), headers: {"Accept": "application/json"});
+  Future<String> getPosts() async {
+    var res = await http.get(Uri.encodeFull(apiUrl + "posts?_embed"),
+        headers: {"Accept": "application/json"});
 
     // fill our posts list with results and update state
     setState(() {
@@ -70,6 +69,7 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     double size = mediaQueryData.size.height;
+
     /// Navigation to MenuDetail.dart if user Click icon in category Menu like a example camera
     var onClickMenuIcon = () {
       // Navigator.of(context).push(PageRouteBuilder(
@@ -129,8 +129,6 @@ class _homeState extends State<home> {
                   fontWeight: FontWeight.w400),
             ),
           ),
-
-
           Padding(padding: EdgeInsets.only(bottom: 30.0))
         ],
       ),
@@ -151,8 +149,9 @@ class _homeState extends State<home> {
       drawer: Drawer(
         child: Container(
           decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage("assets/img/menu_background.jpg"),fit: BoxFit.cover)
-          ),
+              image: DecorationImage(
+                  image: AssetImage("assets/img/menu_background.jpg"),
+                  fit: BoxFit.cover)),
           child: Padding(
             padding: const EdgeInsets.only(left: 20.0),
             child: Column(
@@ -169,16 +168,17 @@ class _homeState extends State<home> {
                         fontSize: 21.0,
                         letterSpacing: 2.0,
                         fontWeight: FontWeight.w500)),
-                        //_line(),
-             SizedBox(
+                //_line(),
+                SizedBox(
                   height: 10.0,
                 ),
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pop(context);
-                    Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> new form()));
+                    Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (_, __, ___) => new form()));
                   },
-                                  child: Text("Forms",
+                  child: Text("Forms",
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: "Gotik",
@@ -186,16 +186,17 @@ class _homeState extends State<home> {
                           letterSpacing: 2.0,
                           fontWeight: FontWeight.w500)),
                 ),
-                  // _line(),
-         SizedBox(
+                // _line(),
+                SizedBox(
                   height: 10.0,
                 ),
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pop(context);
-                    Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> new brand()));
+                    Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (_, __, ___) => new brand()));
                   },
-                                  child: Text("Categorie Brand",
+                  child: Text("Categorie Brand",
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: "Gotik",
@@ -203,16 +204,17 @@ class _homeState extends State<home> {
                           letterSpacing: 2.0,
                           fontWeight: FontWeight.w500)),
                 ),
-                   //_line(),
-         SizedBox(
+                //_line(),
+                SizedBox(
                   height: 10.0,
                 ),
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.of(context).pop();
-                    Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> new help()));
+                    Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (_, __, ___) => new help()));
                   },
-                                  child: Text("webCappow",
+                  child: Text("webCappow",
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: "Gotik",
@@ -220,16 +222,17 @@ class _homeState extends State<home> {
                           letterSpacing: 2.0,
                           fontWeight: FontWeight.w500)),
                 ),
-                  // _line(),
-         SizedBox(
+                // _line(),
+                SizedBox(
                   height: 10.0,
                 ),
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.of(context).pop();
-                    Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> new about()));
+                    Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (_, __, ___) => new about()));
                   },
-                                  child: Text("About",
+                  child: Text("About",
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: "Gotik",
@@ -237,16 +240,17 @@ class _homeState extends State<home> {
                           letterSpacing: 2.0,
                           fontWeight: FontWeight.w500)),
                 ),
-                  // _line(),
-         SizedBox(
+                // _line(),
+                SizedBox(
                   height: 10.0,
                 ),
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.pop(context);
-                       Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> new profil()));
+                    Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (_, __, ___) => new profil()));
                   },
-                                  child: Text("Profile",
+                  child: Text("Profile",
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: "Gotik",
@@ -254,14 +258,15 @@ class _homeState extends State<home> {
                           letterSpacing: 2.0,
                           fontWeight: FontWeight.w500)),
                 ),
-            //_line(),
-          SizedBox(
+                //_line(),
+                SizedBox(
                   height: 10.0,
                 ),
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Navigator.of(context).pop();
-                    Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> new french()));
+                    Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (_, __, ___) => new french()));
                   },
                   child: Text("French",
                       style: TextStyle(
@@ -286,10 +291,10 @@ class _homeState extends State<home> {
           children: <Widget>[
             /// Call var imageSlider
             imageSlider,
+
             /// Call var categoryIcon
             categoryIcon,
-      
-         
+
             Padding(
               padding: const EdgeInsets.only(left: 20.0, top: 10),
               child: Text(
@@ -300,46 +305,49 @@ class _homeState extends State<home> {
                     fontWeight: FontWeight.w700),
               ),
             ),
-               Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 20.0, top: 15.0),
               child: Container(
                 height: 200.0,
                 width: double.infinity,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-          itemCount: posts == null ? 0 : posts.length,
-          itemBuilder: (BuildContext context, int index) {
-            return InkWell(
-              onTap: (){
-                   Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> new detailPost(post: posts[index])));
-              },
-                          child: Container(
-                width: 110.0,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                       Container(
-                         height: 150.0,
-                         width: 100.0,
-                         child: new FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                            image: posts[index]["featured_media"] == null
-                                   ? Container()
-                                   : posts[index]["_embedded"]["wp:featuredmedia"][0]["source_url"],
-                          fit: BoxFit.cover,),
-                       ),
-                      new Padding(
-                        padding: EdgeInsets.only(top:10.0),
-                        child: Text(posts[index]["title"]["rendered"]),
-                       
-                      )
-                  ],
+                  itemCount: posts == null ? 0 : posts.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteBuilder(
+                            pageBuilder: (_, __, ___) =>
+                                new detailPost(post: posts[index])));
+                      },
+                      child: Container(
+                        width: 110.0,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Container(
+                              height: 150.0,
+                              width: 100.0,
+                              child: new FadeInImage.memoryNetwork(
+                                placeholder: kTransparentImage,
+                                image: posts[index]["featured_media"] == null
+                                    ? Container()
+                                    : posts[index]["_embedded"]
+                                        ["wp:featuredmedia"][0]["source_url"],
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            new Padding(
+                              padding: EdgeInsets.only(top: 10.0),
+                              child: Text(posts[index]["title"]["rendered"]),
+                            )
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                 ),
-              ),
-            );
-          },
-      ),
               ),
             ),
             Padding(
@@ -359,42 +367,44 @@ class _homeState extends State<home> {
                 width: double.infinity,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-          itemCount: posts == null ? 0 : posts.length,
-          itemBuilder: (BuildContext context, int index) {
-            return InkWell(
-              onTap: (){
-                   Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> new detailPost(post: posts[index])));
-              },
-                          child: Container(
-                width: 110.0,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                       Container(
-                         height: 150.0,
-                         width: 100.0,
-                         child: new FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                            image: posts[index]["featured_media"] == null
-                                   ? Container()
-                                   : posts[index]["_embedded"]["wp:featuredmedia"][0]["source_url"],
-                          fit: BoxFit.cover,),
-                       ),
-                      new Padding(
-                        padding: EdgeInsets.only(top:10.0),
-                        child: Text(posts[index]["title"]["rendered"]),
-
-                      )
-                  ],
+                  itemCount: posts == null ? 0 : posts.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteBuilder(
+                            pageBuilder: (_, __, ___) =>
+                                new detailPost(post: posts[index])));
+                      },
+                      child: Container(
+                        width: 110.0,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Container(
+                              height: 150.0,
+                              width: 100.0,
+                              child: new FadeInImage.memoryNetwork(
+                                placeholder: kTransparentImage,
+                                image: posts[index]["featured_media"] == null
+                                    ? Container()
+                                    : posts[index]["_embedded"]
+                                        ["wp:featuredmedia"][0]["source_url"],
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            new Padding(
+                              padding: EdgeInsets.only(top: 10.0),
+                              child: Text(posts[index]["title"]["rendered"]),
+                            )
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
-            );
-          },
-      ),
-              ),
             ),
-
 
             Padding(
               padding: const EdgeInsets.only(left: 20.0, top: 10),
@@ -406,49 +416,51 @@ class _homeState extends State<home> {
                     fontWeight: FontWeight.w700),
               ),
             ),
-              Padding(
+            Padding(
               padding: const EdgeInsets.only(left: 20.0, top: 15.0),
               child: Container(
                 height: 200.0,
                 width: double.infinity,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-          itemCount: posts == null ? 0 : posts.length,
-          itemBuilder: (BuildContext context, int index) {
-            return InkWell(
-              onTap: (){
-                   Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> new detailPost(post: posts[index])));
-              },
-                          child: Container(
-                width: 110.0,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                       Container(
-                         height: 150.0,
-                         width: 100.0,
-                         child: new FadeInImage.memoryNetwork(
-                          placeholder: kTransparentImage,
-                            image: posts[index]["featured_media"] == null
-                                   ? Container()
-                                   : posts[index]["_embedded"]["wp:featuredmedia"][0]["source_url"],
-                          fit: BoxFit.cover,),
-                       ),
-                      new Padding(
-                        padding: EdgeInsets.only(top:10.0),
-                        //child: Text(posts[index]["title"]["rendered"]),
-                       
-                      )
-                  ],
+                  itemCount: posts == null ? 0 : posts.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteBuilder(
+                            pageBuilder: (_, __, ___) =>
+                                new detailPost(post: posts[index])));
+                      },
+                      child: Container(
+                        width: 110.0,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Container(
+                              height: 150.0,
+                              width: 100.0,
+                              child: new FadeInImage.memoryNetwork(
+                                placeholder: kTransparentImage,
+                                image: posts[index]["featured_media"] == null
+                                    ? Container()
+                                    : posts[index]["_embedded"]
+                                        ["wp:featuredmedia"][0]["source_url"],
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            new Padding(
+                              padding: EdgeInsets.only(top: 10.0),
+                              //child: Text(posts[index]["title"]["rendered"]),
+                            )
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
-            );
-          },
-      ),
-              ),
             ),
-
           ],
         ),
       ),
@@ -567,77 +579,71 @@ class CategoryIconValue extends StatelessWidget {
 }
 
 class CategoryPublisher extends StatelessWidget {
-
-    List<itemSlider> item;
+  List<itemSlider> item;
   CategoryPublisher({this.item});
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemCount: item.length,
-        itemBuilder: (ctx,i){
-  return Padding(
-        padding: const EdgeInsets.only(left: 20.0),
-        child: Container(
-          height: 100.0,
-          width: 50.0,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(bottom: 5.0),
-                child: Container(
-                  height: 100.0,
-                  width: 50.0,
-                  child: InkWell(
-                    onTap: (){
-
-                      // Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> detailPost(item[i])));
-
-                    },
-                    //             child: Container(
-                    //   height: 150.0,
-                    //   width: 115.0,
-                    //   child: Material(
-                    //     child: DecoratedBox(
-                    //   decoration: BoxDecoration(
-                    //   image: DecorationImage(
-                    //       image: AssetImage('${item[i].img}'), fit: BoxFit.cover),
-                    //    boxShadow: [
-                    //     BoxShadow(
-                    //       color: Color(0xFFABABAB).withOpacity(0.3),
-                    //       blurRadius: 1.0,
-                    //       spreadRadius: 2.0,
-                    //     ),
-                    //   ],
-                    //   ),
-                    //     ),
-                    //   ),
-                    // ),
+      itemCount: item.length,
+      itemBuilder: (ctx, i) {
+        return Padding(
+          padding: const EdgeInsets.only(left: 20.0),
+          child: Container(
+            height: 100.0,
+            width: 50.0,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5.0),
+                  child: Container(
+                    height: 100.0,
+                    width: 50.0,
+                    child: InkWell(
+                      onTap: () {
+                        // Navigator.of(context).push(PageRouteBuilder(pageBuilder: (_,__,___)=> detailPost(item[i])));
+                      },
+                      //             child: Container(
+                      //   height: 150.0,
+                      //   width: 115.0,
+                      //   child: Material(
+                      //     child: DecoratedBox(
+                      //   decoration: BoxDecoration(
+                      //   image: DecorationImage(
+                      //       image: AssetImage('${item[i].img}'), fit: BoxFit.cover),
+                      //    boxShadow: [
+                      //     BoxShadow(
+                      //       color: Color(0xFFABABAB).withOpacity(0.3),
+                      //       blurRadius: 1.0,
+                      //       spreadRadius: 2.0,
+                      //     ),
+                      //   ],
+                      //   ),
+                      //     ),
+                      //   ),
+                      // ),
+                    ),
                   ),
                 ),
-              ),
-              Container(
-                height: 100.0,
-
-                child: Text('${item[i].title}',style: TextStyle(color: Colors.black,fontSize: 20.0),))
-            ],
+                Container(
+                    height: 100.0,
+                    child: Text(
+                      '${item[i].title}',
+                      style: TextStyle(color: Colors.black, fontSize: 20.0),
+                    ))
+              ],
+            ),
           ),
-        ),
-      );
-        },
+        );
+      },
     );
-
   }
 }
 
-
-
-
-
-Widget _line(){
+Widget _line() {
   return Padding(
-    padding: const EdgeInsets.only(left:0.0,right: 15.0,top: 13.0),
+    padding: const EdgeInsets.only(left: 0.0, right: 15.0, top: 13.0),
     child: Container(
       height: 0.5,
       width: double.infinity,

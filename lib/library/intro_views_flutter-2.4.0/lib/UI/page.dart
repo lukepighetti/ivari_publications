@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/Library/intro_views_flutter-2.4.0/lib/Models/page_view_model.dart';
 
-
 /// This is the class which contains the Page UI.
 class Page extends StatelessWidget {
   ///page details
@@ -31,10 +30,10 @@ class Page extends StatelessWidget {
         opacity: percentVisible,
         child: new OrientationBuilder(
             builder: (BuildContext context, Orientation orientation) {
-              return orientation == Orientation.portrait
-                  ? _buildPortraitPage()
-                  : __buildLandscapePage();
-            }), //OrientationBuilder
+          return orientation == Orientation.portrait
+              ? _buildPortraitPage()
+              : __buildLandscapePage();
+        }), //OrientationBuilder
       ),
     );
   }
@@ -121,7 +120,7 @@ class _BodyPageTransform extends StatelessWidget {
     return new Transform(
       //Used for vertical transformation
       transform:
-      new Matrix4.translationValues(0.0, 30.0 * (1 - percentVisible), 0.0),
+          new Matrix4.translationValues(0.0, 30.0 * (1 - percentVisible), 0.0),
       child: new Padding(
         padding: const EdgeInsets.only(
           bottom: 185.0,
@@ -155,7 +154,7 @@ class _ImagePageTransform extends StatelessWidget {
     return new Transform(
       //Used for vertical transformation
       transform:
-      new Matrix4.translationValues(0.0, 50.0 * (1 - percentVisible), 0.0),
+          new Matrix4.translationValues(0.0, 50.0 * (1 - percentVisible), 0.0),
       child: new Padding(
         padding: new EdgeInsets.only(
           top: 60.0,
@@ -187,7 +186,7 @@ class _TitlePageTransform extends StatelessWidget {
     return new Transform(
       //Used for vertical transformation
       transform:
-      new Matrix4.translationValues(0.0, 30.0 * (1 - percentVisible), 0.0),
+          new Matrix4.translationValues(0.0, 30.0 * (1 - percentVisible), 0.0),
       child: new Padding(
         padding: new EdgeInsets.only(
           bottom: 0.0,

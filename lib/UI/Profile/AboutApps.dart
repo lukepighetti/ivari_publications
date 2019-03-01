@@ -7,7 +7,6 @@ class aboutApps extends StatefulWidget {
 
 class _aboutAppsState extends State<aboutApps> {
   @override
-
   static var _txtCustomHead = TextStyle(
     color: Colors.black54,
     fontSize: 17.0,

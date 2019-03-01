@@ -1,42 +1,34 @@
-class itemSlider{
-  String id,img, title,imgCover, body,txtDesc2,txtDesc3,txtDesc4;
+class itemSlider {
+  String id, img, title, imgCover, body, txtDesc2, txtDesc3, txtDesc4;
 
   // itemSlider({this.img,this.title,this.imgCover,this.txtDesc1,this.txtDesc2,this.txtDesc3,this.txtDesc4,});
-  itemSlider({
-    this.title,
-    this.img,
-    this.body
-  });
+  itemSlider({this.title, this.img, this.body});
 
-factory itemSlider.fromJson(Map<String, dynamic> json){
-return itemSlider(
-    // title: json['id'] as String,
-    // txtDesc1: json['content'] as String,
-    // img: json['better_featured_image'] as String
-      img: json["_embedded"]["wp:featuredmedia"][0]["source_url"],
-      title: json["title"]["rendered"] as String,
-      body: json["excerpt"]["rendered"] as String
-
-  );
-}
+  factory itemSlider.fromJson(Map<String, dynamic> json) {
+    return itemSlider(
+        // title: json['id'] as String,
+        // txtDesc1: json['content'] as String,
+        // img: json['better_featured_image'] as String
+        img: json["_embedded"]["wp:featuredmedia"][0]["source_url"],
+        title: json["title"]["rendered"] as String,
+        body: json["excerpt"]["rendered"] as String);
+  }
 }
 
-
-class Post{
+class Post {
   int id;
   int userID;
   String title;
   String body;
 
-  Post({this.id,this.userID,this.title,this.body});
+  Post({this.id, this.userID, this.title, this.body});
 
-  factory Post.fromJson(Map<String,dynamic> json){
+  factory Post.fromJson(Map<String, dynamic> json) {
     return Post(
-      userID: json['userID'] as int,
-      id: json['id'] as int,
-      title: json['title'] as String,
-      body: json['body'] as String
-    );
+        userID: json['userID'] as int,
+        id: json['id'] as int,
+        title: json['title'] as String,
+        body: json['body'] as String);
   }
 }
 
@@ -91,5 +83,5 @@ class Post{
 //     txtDesc3: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
 //     txtDesc4: "Where can I get some? There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
 //     ),
-      
+
 // ];
