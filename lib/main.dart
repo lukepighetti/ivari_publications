@@ -53,11 +53,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   /// Setting duration in splash screen
   startTime() async {
-    return Timer(Duration(milliseconds: 4500), NavigatorPage);
+    return Timer(Duration(milliseconds: 4500), navigatorPage);
   }
 
   /// To navigate layout change
-  void NavigatorPage() {
+  void navigatorPage() {
     Navigator.of(context).pushReplacementNamed("login");
   }
 
