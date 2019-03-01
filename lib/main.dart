@@ -6,11 +6,11 @@ import 'package:info_apps_flutter/OnBoarding.dart';
 
 /// Run first apps open
 void main() {
-  runApp(myApp());
+  runApp(MyApp());
 }
 
 /// Set orienttation
-class myApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     /// To set orientation always portrait
