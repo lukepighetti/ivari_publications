@@ -44,7 +44,6 @@ class _notificationState extends State<notification> {
   }
 
   Widget build(BuildContext context) {
-    MediaQueryData mediaQuery = MediaQuery.of(context);
     return Scaffold(
         appBar: AppBar(
           title: Text(

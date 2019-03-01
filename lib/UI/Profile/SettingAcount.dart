@@ -40,13 +40,13 @@ class _settingAcountState extends State<settingAcount> {
         child: Container(
           child: Column(
             children: <Widget>[
-              setting(
+              Setting(
                 head: "Account",
                 sub1: "Address",
                 sub2: "Telephone",
                 sub3: "Email",
               ),
-              setting(
+              Setting(
                 head: "Setting",
                 sub1: "Order Notifications",
                 sub2: "Discount Notifications",
@@ -76,7 +76,7 @@ class _settingAcountState extends State<settingAcount> {
   }
 }
 
-class setting extends StatelessWidget {
+class Setting extends StatelessWidget {
   static var _txtCustomHead = TextStyle(
     color: Colors.black54,
     fontSize: 17.0,
@@ -91,9 +91,9 @@ class setting extends StatelessWidget {
     fontFamily: "Gotik",
   );
 
-  String head, sub1, sub2, sub3;
+  final String head, sub1, sub2, sub3;
 
-  setting({this.head, this.sub1, this.sub2, this.sub3});
+  Setting({this.head, this.sub1, this.sub2, this.sub3});
 
   @override
   Widget build(BuildContext context) {

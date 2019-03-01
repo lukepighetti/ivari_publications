@@ -61,7 +61,6 @@ class _OrderScreenState extends State<OrderScreen> {
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQueryData = MediaQuery.of(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -230,7 +229,6 @@ class _OrderScreenState extends State<OrderScreen> {
 
 /// Constructor Data Orders
 class qeueuItem extends StatelessWidget {
-  @override
   static var _txtCustomOrder = TextStyle(
     color: Colors.black45,
     fontSize: 13.5,
@@ -238,12 +236,13 @@ class qeueuItem extends StatelessWidget {
     fontFamily: "Gotik",
   );
 
-  String icon, txtHeader, txtInfo, time;
-  double paddingValue;
+  final String icon, txtHeader, txtInfo, time;
+  final double paddingValue;
 
   qeueuItem(
       {this.icon, this.txtHeader, this.txtInfo, this.time, this.paddingValue});
 
+  @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     return Padding(

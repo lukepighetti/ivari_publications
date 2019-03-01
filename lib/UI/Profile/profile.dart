@@ -31,9 +31,6 @@ var _txtCategory = _txt.copyWith(
 class _profilState extends State<profil> {
   @override
   Widget build(BuildContext context) {
-    /// Declare MediaQueryData
-    MediaQueryData mediaQueryData = MediaQuery.of(context);
-
     /// To Sett PhotoProfile,Name and Edit Profile
     var _profile = Padding(
       padding: EdgeInsets.only(
@@ -115,7 +112,7 @@ class _profilState extends State<profil> {
                   /// Setting Category List
                   children: <Widget>[
                     /// Call category class
-                    category(
+                    Category(
                       txt: "Notification",
                       padding: 35.0,
                       image: "assets/icon/notification.png",
@@ -132,7 +129,7 @@ class _profilState extends State<profil> {
                         height: 2.0,
                       ),
                     ),
-                    category(
+                    Category(
                       txt: "Payments",
                       padding: 35.0,
                       image: "assets/icon/creditAcount.png",
@@ -150,7 +147,7 @@ class _profilState extends State<profil> {
                         height: 2.0,
                       ),
                     ),
-                    category(
+                    Category(
                       txt: "Message",
                       padding: 26.0,
                       image: "assets/icon/chat.png",
@@ -167,7 +164,7 @@ class _profilState extends State<profil> {
                         height: 2.0,
                       ),
                     ),
-                    category(
+                    Category(
                       txt: "My Orders",
                       padding: 23.0,
                       image: "assets/icon/truck.png",
@@ -184,7 +181,7 @@ class _profilState extends State<profil> {
                         height: 2.0,
                       ),
                     ),
-                    category(
+                    Category(
                       txt: "Setting Acount",
                       padding: 30.0,
                       image: "assets/icon/setting.png",
@@ -201,7 +198,7 @@ class _profilState extends State<profil> {
                         height: 2.0,
                       ),
                     ),
-                    category(
+                    Category(
                       txt: "Call Center",
                       padding: 30.0,
                       image: "assets/icon/callcenter.png",
@@ -218,7 +215,7 @@ class _profilState extends State<profil> {
                         height: 2.0,
                       ),
                     ),
-                    category(
+                    Category(
                       padding: 38.0,
                       txt: "About Apps",
                       image: "assets/icon/aboutapp.png",
@@ -240,14 +237,14 @@ class _profilState extends State<profil> {
 }
 
 /// Component category class to set list
-class category extends StatelessWidget {
+class Category extends StatelessWidget {
+  final String txt, image;
+  final GestureTapCallback tap;
+  final double padding;
+
+  Category({this.txt, this.image, this.tap, this.padding});
+
   @override
-  String txt, image;
-  GestureTapCallback tap;
-  double padding;
-
-  category({this.txt, this.image, this.tap, this.padding});
-
   Widget build(BuildContext context) {
     return InkWell(
       onTap: tap,
