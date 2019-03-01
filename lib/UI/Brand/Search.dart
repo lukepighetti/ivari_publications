@@ -86,24 +86,24 @@ class _SearchAppBarState extends State<SearchAppBar> {
                 FavoriteItem(
                   image: "assets/imgItem/shoes1.jpg",
                   title: "Firrona Skirt!",
-                  Salary: "\$ 10",
-                  Rating: "4.8",
+                  salary: "\$ 10",
+                  rating: "4.8",
                   sale: "923 Sale",
                 ),
                 Padding(padding: EdgeInsets.only(left: 20.0)),
                 FavoriteItem(
                   image: "assets/imgItem/acesoris1.jpg",
                   title: "Arpenaz 4",
-                  Salary: "\$ 200",
-                  Rating: "4.2",
+                  salary: "\$ 200",
+                  rating: "4.2",
                   sale: "892 Sale",
                 ),
                 Padding(padding: EdgeInsets.only(left: 20.0)),
                 FavoriteItem(
                   image: "assets/imgItem/kids1.jpg",
                   title: "Mon Cheri Pingun",
-                  Salary: "\$ 3",
-                  Rating: "4.8",
+                  salary: "\$ 3",
+                  rating: "4.8",
                   sale: "110 Sale",
                 ),
                 Padding(padding: EdgeInsets.only(right: 10.0)),
@@ -264,9 +264,9 @@ class KeywordItem extends StatelessWidget {
 
 ///Favorite Item Card
 class FavoriteItem extends StatelessWidget {
-  String image, Rating, Salary, title, sale;
+  String image, rating, salary, title, sale;
 
-  FavoriteItem({this.image, this.Rating, this.Salary, this.title, this.sale});
+  FavoriteItem({this.image, this.rating, this.salary, this.title, this.sale});
 
   @override
   Widget build(BuildContext context) {
@@ -319,7 +319,7 @@ class FavoriteItem extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                   child: Text(
-                    Salary,
+                    salary,
                     style: TextStyle(
                         fontFamily: "Sans",
                         fontWeight: FontWeight.w500,
@@ -336,7 +336,7 @@ class FavoriteItem extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Text(
-                            Rating,
+                            rating,
                             style: TextStyle(
                                 fontFamily: "Sans",
                                 color: Colors.black26,
