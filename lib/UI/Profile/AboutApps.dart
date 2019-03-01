@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class aboutApps extends StatefulWidget {
+class AboutAppsScreen extends StatefulWidget {
   @override
-  _aboutAppsState createState() => _aboutAppsState();
+  _AboutAppsScreenState createState() => _AboutAppsScreenState();
 }
 
-class _aboutAppsState extends State<aboutApps> {
+class _AboutAppsScreenState extends State<AboutAppsScreen> {
   @override
   static var _txtCustomHead = TextStyle(
     color: Colors.black54,

@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/UI/LoginOrSignup/Login.dart';
 import 'package:info_apps_flutter/UI/LoginOrSignup/LoginAnimation.dart';
-import 'package:info_apps_flutter/UI/LoginOrSignup/Signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -19,9 +18,6 @@ class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
-    mediaQueryData.devicePixelRatio;
-    mediaQueryData.size.height;
-    mediaQueryData.size.width;
 
     return Scaffold(
       body: Stack(
@@ -139,7 +135,6 @@ class _SignUpColumnState extends State<SignUpColumn>
               });
             }
           });
-    // TODO: implement initState
     super.initState();
   }
 
@@ -151,7 +146,7 @@ class _SignUpColumnState extends State<SignUpColumn>
   }
 
   /// Playanimation set forward reverse
-  Future<Null> _PlayAnimation() async {
+  Future<Null> _playAnimation() async {
     try {
       await sanimationController.forward();
       await sanimationController.reverse();

@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/UI/LoginOrSignup/LoginAnimation.dart';
 import 'package:info_apps_flutter/UI/LoginOrSignup/Signup.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -18,7 +17,6 @@ class _LoginScreenState extends State<LoginScreen>
 
   var tap = 0;
 
-  var _emailController = TextEditingController();
   var _passwordController = TextEditingController();
 
   @override
@@ -34,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen>
               });
             }
           });
-    // TODO: implement initState
+
     super.initState();
   }
 
@@ -46,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen>
   }
 
   /// Playanimation set forward reverse
-  Future<Null> _PlayAnimation() async {
+  Future<Null> _playAnimation() async {
     try {
       await sanimationController.forward();
       await sanimationController.reverse();
@@ -57,9 +55,7 @@ class _LoginScreenState extends State<LoginScreen>
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);
-    mediaQueryData.devicePixelRatio;
-    mediaQueryData.size.width;
-    mediaQueryData.size.height;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
@@ -128,12 +124,12 @@ class _LoginScreenState extends State<LoginScreen>
                             /// ButtonCustomFacebook
                             Padding(
                                 padding: EdgeInsets.symmetric(vertical: 30.0)),
-                            buttonCustomFacebook(),
+                            ButtonCustomFacebook(),
 
                             /// ButtonCustomGoogle
                             Padding(
                                 padding: EdgeInsets.symmetric(vertical: 7.0)),
-                            buttonCustomGoogle(),
+                            ButtonCustomGoogle(),
 
                             /// Set Text
                             Padding(
@@ -202,16 +198,16 @@ class _LoginScreenState extends State<LoginScreen>
                       ? InkWell(
                           splashColor: Colors.yellow,
                           onTap: () async {
-                            FirebaseUser user;
-                            try {
-                              user = await FirebaseAuth.instance
-                                  .signInWithEmailAndPassword(
-                                      email: _emailController.text,
-                                      password: _passwordController.text);
-                            } on Exception catch (e) {
-                              // TODO: Do something here if the information isn't correct.
-                              // TODO: Or there's no user with this account.
-                            }
+                            // FirebaseUser user;
+                            // try {
+                            // user = await FirebaseAuth.instance
+                            //     .signInWithEmailAndPassword(
+                            //         email: _emailController.text,
+                            //         password: _passwordController.text);
+                            // } on Exception catch (e) {
+                            // TODO: Do something here if the information isn't correct.
+                            // TODO: Or there's no user with this account.
+                            // }
                             //TODO: Pass data to the new screen.
                             setState(() {
                               tap = 1;
@@ -219,7 +215,7 @@ class _LoginScreenState extends State<LoginScreen>
                             LoginAnimation(
                               animationController: sanimationController.view,
                             );
-                            _PlayAnimation();
+                            _playAnimation();
                             return tap;
                           },
                           child: buttonBlackBottom(),
@@ -239,10 +235,10 @@ class _LoginScreenState extends State<LoginScreen>
 
 /// textfromfield custom class
 class MyTextFormField extends StatelessWidget {
-  bool password;
-  String email;
-  IconData icon;
-  TextInputType inputType;
+  final bool password;
+  final String email;
+  final IconData icon;
+  final TextInputType inputType;
   final textEditingController;
 
   MyTextFormField(
@@ -293,7 +289,7 @@ class MyTextFormField extends StatelessWidget {
 }
 
 ///buttonCustomFacebook class
-class buttonCustomFacebook extends StatelessWidget {
+class ButtonCustomFacebook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -331,7 +327,7 @@ class buttonCustomFacebook extends StatelessWidget {
 }
 
 ///buttonCustomGoogle class
-class buttonCustomGoogle extends StatelessWidget {
+class ButtonCustomGoogle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(

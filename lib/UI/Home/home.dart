@@ -1,11 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:info_apps_flutter/UI/Home/detailPosting.dart';
 
 import 'package:transparent_image/transparent_image.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:info_apps_flutter/ListItem/CategorySlider.dart';
 import 'package:info_apps_flutter/ListItem/CategorySlider.dart';
 import 'package:info_apps_flutter/UI/Brand/brand.dart';
 import 'package:info_apps_flutter/UI/Home/about.dart';
@@ -67,26 +65,20 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQueryData = MediaQuery.of(context);
-    double size = mediaQueryData.size.height;
-
     /// Navigation to MenuDetail.dart if user Click icon in category Menu like a example camera
-    var onClickMenuIcon = () {
-      // Navigator.of(context).push(PageRouteBuilder(
-      //     pageBuilder: (_, __, ___) => new menuDetail(),
-      //     transitionDuration: Duration(milliseconds: 750),
-      //     /// Set animation with opacity
-      //     transitionsBuilder:
-      //         (_, Animation<double> animation, __, Widget child) {
-      //       return Opacity(
-      //         opacity: animation.value,
-      //         child: child,
-      //       );
-      //     }));
-    };
-
-    /// Declare device Size
-    var deviceSize = MediaQuery.of(context).size;
+    // var onClickMenuIcon = () {
+    // Navigator.of(context).push(PageRouteBuilder(
+    //     pageBuilder: (_, __, ___) => new menuDetail(),
+    //     transitionDuration: Duration(milliseconds: 750),
+    //     /// Set animation with opacity
+    //     transitionsBuilder:
+    //         (_, Animation<double> animation, __, Widget child) {
+    //       return Opacity(
+    //         opacity: animation.value,
+    //         child: child,
+    //       );
+    //     }));
+    // };
 
     /// ImageSlider in header
     var imageSlider = Container(
@@ -318,7 +310,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {
                         Navigator.of(context).push(PageRouteBuilder(
                             pageBuilder: (_, __, ___) =>
-                                detailPost(post: posts[index])));
+                                DetailPostScreen(post: posts[index])));
                       },
                       child: Container(
                         width: 110.0,
@@ -373,7 +365,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {
                         Navigator.of(context).push(PageRouteBuilder(
                             pageBuilder: (_, __, ___) =>
-                                detailPost(post: posts[index])));
+                                DetailPostScreen(post: posts[index])));
                       },
                       child: Container(
                         width: 110.0,
@@ -429,7 +421,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: () {
                         Navigator.of(context).push(PageRouteBuilder(
                             pageBuilder: (_, __, ___) =>
-                                detailPost(post: posts[index])));
+                                DetailPostScreen(post: posts[index])));
                       },
                       child: Container(
                         width: 110.0,
@@ -470,8 +462,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
 /// Component item Menu icon bellow a ImageSlider
 class CategoryIconValue extends StatelessWidget {
-  String icon1, icon2, icon3, icon4, title1, title2, title3, title4;
-  GestureTapCallback tap1, tap2, tap3, tap4;
+  final String icon1, icon2, icon3, icon4, title1, title2, title3, title4;
+  final GestureTapCallback tap1, tap2, tap3, tap4;
 
   CategoryIconValue(
       {this.icon1,
@@ -579,8 +571,10 @@ class CategoryIconValue extends StatelessWidget {
 }
 
 class CategoryPublisher extends StatelessWidget {
-  List<ItemSlider> item;
+  final List<ItemSlider> item;
+
   CategoryPublisher({this.item});
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -639,15 +633,4 @@ class CategoryPublisher extends StatelessWidget {
       },
     );
   }
-}
-
-Widget _line() {
-  return Padding(
-    padding: const EdgeInsets.only(left: 0.0, right: 15.0, top: 13.0),
-    child: Container(
-      height: 0.5,
-      width: double.infinity,
-      color: Colors.white,
-    ),
-  );
 }

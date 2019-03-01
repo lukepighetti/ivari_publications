@@ -6,8 +6,6 @@ class SearchAppBar extends StatefulWidget {
 }
 
 class _SearchAppBarState extends State<SearchAppBar> {
-  @override
-
   /// Sentence Text header "Hello i am Treva.........."
   var _textHello = Padding(
     padding: const EdgeInsets.only(right: 50.0, left: 20.0),
@@ -156,6 +154,7 @@ class _SearchAppBarState extends State<SearchAppBar> {
     ),
   );
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -199,11 +198,11 @@ class _SearchAppBarState extends State<SearchAppBar> {
 
 /// Popular Keyword Item class
 class KeywordItem extends StatelessWidget {
-  @override
-  String title, title2;
+  final String title, title2;
 
   KeywordItem({this.title, this.title2});
 
+  @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
@@ -264,13 +263,12 @@ class KeywordItem extends StatelessWidget {
 
 ///Favorite Item Card
 class FavoriteItem extends StatelessWidget {
-  String image, rating, salary, title, sale;
+  final String image, rating, salary, title, sale;
 
   FavoriteItem({this.image, this.rating, this.salary, this.title, this.sale});
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQueryData = MediaQuery.of(context);
     return Padding(
       padding: const EdgeInsets.only(left: 2.0),
       child: Container(

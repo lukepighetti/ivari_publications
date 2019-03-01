@@ -223,7 +223,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/aboutapp.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => aboutApps()));
+                            pageBuilder: (_, __, ___) => AboutAppsScreen()));
                       },
                     ),
                     Padding(padding: EdgeInsets.only(bottom: 20.0)),

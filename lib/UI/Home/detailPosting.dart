@@ -3,7 +3,8 @@ import 'package:transparent_image/transparent_image.dart';
 
 /// TODO: dead code
 class DetailPostingScreen extends StatelessWidget {
-  var post;
+  final post;
+
   DetailPostingScreen({Key key, @required var this.post}) : super(key: key);
 
   @override

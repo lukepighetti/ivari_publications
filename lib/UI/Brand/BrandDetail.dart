@@ -4,12 +4,13 @@ import 'package:info_apps_flutter/UI/Brand/Chat.dart';
 import 'package:info_apps_flutter/UI/Home/home.dart';
 
 class BrandDetail extends StatefulWidget {
-  @override
-
   /// Get data from BrandDataList.dart (List Item)
   /// Declare class
   final Brand brand;
+
   BrandDetail(this.brand);
+
+  @override
   _BrandDetailState createState() => _BrandDetailState(brand);
 }
 
@@ -274,7 +275,7 @@ class _BrandDetailState extends State<BrandDetail> {
                                           if (notif == "Notifications") {
                                             notif = "Notificated";
                                           } else {
-                                            (notif = "Notifications");
+                                            notif = "Notifications";
                                           }
                                         });
                                       }),
@@ -283,7 +284,7 @@ class _BrandDetailState extends State<BrandDetail> {
                                   if (notif == "Notifications") {
                                     notif = "Notificated";
                                   } else {
-                                    (notif = "Notifications");
+                                    notif = "Notifications";
                                   }
                                 });
                                 _key.currentState.showSnackBar(snackBar);
@@ -476,9 +477,9 @@ class _BrandDetailState extends State<BrandDetail> {
 
 /// Class For Botton Custom
 class ButtonCustom extends StatelessWidget {
-  String txt;
-  Color color;
-  GestureTapCallback ontap;
+  final String txt;
+  final Color color;
+  final GestureTapCallback ontap;
 
   ButtonCustom({this.txt, this.color, this.ontap});
 
