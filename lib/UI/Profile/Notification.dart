@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/ListItem/notificationsData.dart';
 
-class notification extends StatefulWidget {
+class NotificationScreen extends StatefulWidget {
   @override
-  _notificationState createState() => _notificationState();
+  _NotificationScreenState createState() => _NotificationScreenState();
 }
 
-class _notificationState extends State<notification> {
+class _NotificationScreenState extends State<NotificationScreen> {
   final List<Post> items = List();
   @override
   void initState() {
@@ -125,7 +125,7 @@ class _notificationState extends State<notification> {
                         ),
                       ));
                 })
-            : noItemNotifications());
+            : NoItemNotifications());
   }
 }
 
@@ -134,7 +134,7 @@ void _onTapItem(BuildContext context, Post post) {
       SnackBar(content: Text(post.id.toString() + ' - ' + post.title)));
 }
 
-class noItemNotifications extends StatelessWidget {
+class NoItemNotifications extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQueryData = MediaQuery.of(context);

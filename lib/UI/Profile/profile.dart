@@ -118,7 +118,7 @@ class _profilState extends State<profil> {
                       image: "assets/icon/notification.png",
                       tap: () {
                         Navigator.of(context).push(PageRouteBuilder(
-                            pageBuilder: (_, __, ___) => notification()));
+                            pageBuilder: (_, __, ___) => NotificationScreen()));
                       },
                     ),
                     Padding(
