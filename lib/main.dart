@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       /// Move splash screen to ChoseLogin Layout
       /// Routes
       routes: <String, WidgetBuilder>{
-        "login": (BuildContext context) => onBoarding()
+        "login": (BuildContext context) => OnBoarding()
       },
     );
   }

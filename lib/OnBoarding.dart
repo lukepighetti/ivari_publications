@@ -3,9 +3,9 @@ import 'package:info_apps_flutter/Library/intro_views_flutter-2.4.0/lib/Models/p
 import 'package:info_apps_flutter/UI/LoginOrSignup/Login.dart';
 import 'package:info_apps_flutter/library/intro_views_flutter-2.4.0/lib/intro_views_flutter.dart';
 
-class onBoarding extends StatefulWidget {
+class OnBoarding extends StatefulWidget {
   @override
-  _onBoardingState createState() => _onBoardingState();
+  _OnBoardingState createState() => _OnBoardingState();
 }
 
 var _fontHeaderStyle = TextStyle(
@@ -79,7 +79,7 @@ final pages = [
       )),
 ];
 
-class _onBoardingState extends State<onBoarding> {
+class _OnBoardingState extends State<OnBoarding> {
   @override
   Widget build(BuildContext context) {
     return IntroViewsFlutter(
