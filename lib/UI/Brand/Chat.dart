@@ -2,19 +2,19 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:info_apps_flutter/ListItem/BrandDataList.dart';
 
-class privatemessage extends StatefulWidget {
+class PrivateMessage extends StatefulWidget {
   /// Declare Brand class and Get Data Name for Appbar (BrandDataList.dart)
   final Brand brand;
-  privatemessage(this.brand);
+  PrivateMessage(this.brand);
 
   @override
-  _privatemessageState createState() => _privatemessageState(brand);
+  _PrivateMessageState createState() => _PrivateMessageState(brand);
 }
 
 /// Declare default User Name
 const String defaultUserName = "Alisa Heart";
 
-class _privatemessageState extends State<privatemessage>
+class _PrivateMessageState extends State<PrivateMessage>
     with TickerProviderStateMixin {
   final List<Msg> _messages = <Msg>[];
   final TextEditingController _textController = TextEditingController();
@@ -22,7 +22,7 @@ class _privatemessageState extends State<privatemessage>
 
   /// Declare Brand class
   final Brand brand;
-  _privatemessageState(this.brand);
+  _PrivateMessageState(this.brand);
 
   @override
   Widget build(BuildContext ctx) {

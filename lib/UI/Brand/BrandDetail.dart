@@ -257,7 +257,7 @@ class _BrandDetailState extends State<BrandDetail> {
                               ontap: () {
                                 Navigator.of(context).push(PageRouteBuilder(
                                     pageBuilder: (_, __, ___) =>
-                                        privatemessage(brand)));
+                                        PrivateMessage(brand)));
                               },
                             ),
                             Padding(padding: EdgeInsets.only(top: 10.0)),
