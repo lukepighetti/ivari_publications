@@ -26,7 +26,7 @@ class DetailPostScreen extends StatelessWidget {
                 child: InkWell(
                     onTap: () {
                       Navigator.of(context).pushReplacement(PageRouteBuilder(
-                          pageBuilder: (_, __, ___) => home()));
+                          pageBuilder: (_, __, ___) => HomeScreen()));
                     },
                     child: Icon(
                       Icons.arrow_back,

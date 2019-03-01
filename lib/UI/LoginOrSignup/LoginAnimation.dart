@@ -41,7 +41,7 @@ class _LoginAnimationState extends State<LoginAnimation> {
     widget.animationController.addListener(() {
       if (widget.animation.isCompleted) {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => home()));
+            MaterialPageRoute(builder: (BuildContext context) => HomeScreen()));
       }
     });
 

@@ -32,11 +32,11 @@ Future<List<ItemSlider>> fetchitemSliders(http.Client client) async {
   return compute(parseitemSlider, respone.body);
 }
 
-class home extends StatefulWidget {
-  _homeState createState() => _homeState();
+class HomeScreen extends StatefulWidget {
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _homeState extends State<home> {
+class _HomeScreenState extends State<HomeScreen> {
   /// To set duration initState auto start if FlashSale Layout open
   List posts;
 
