@@ -7,9 +7,9 @@ import 'package:info_apps_flutter/UI/Profile/MyOrders.dart';
 import 'package:info_apps_flutter/UI/Profile/Notification.dart';
 import 'package:info_apps_flutter/UI/Profile/SettingAcount.dart';
 
-class profil extends StatefulWidget {
+class ProfileScreen extends StatefulWidget {
   @override
-  _profilState createState() => _profilState();
+  _ProfileScreenState createState() => _ProfileScreenState();
 }
 
 /// Custom Font
@@ -28,7 +28,7 @@ var _txtEdit = _txt.copyWith(color: Colors.black26, fontSize: 15.0);
 var _txtCategory = _txt.copyWith(
     fontSize: 14.5, color: Colors.black54, fontWeight: FontWeight.w500);
 
-class _profilState extends State<profil> {
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     /// To Sett PhotoProfile,Name and Edit Profile

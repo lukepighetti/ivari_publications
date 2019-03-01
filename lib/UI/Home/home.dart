@@ -240,7 +240,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => profil()));
+                        pageBuilder: (_, __, ___) => ProfileScreen()));
                   },
                   child: Text("Profile",
                       style: TextStyle(
