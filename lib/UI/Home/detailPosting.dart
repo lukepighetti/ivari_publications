@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-class detailPosting extends StatelessWidget {
+/// TODO: dead code
+class DetailPostingScreen extends StatelessWidget {
   var post;
-  detailPosting({Key key, @required var this.post}) : super(key: key);
+  DetailPostingScreen({Key key, @required var this.post}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
