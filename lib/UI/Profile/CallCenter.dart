@@ -69,7 +69,7 @@ class _CallCenterScreenState extends State<CallCenterScreen> {
                 child: InkWell(
                   onTap: () {
                     Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (_, __, ___) => chatItem()));
+                        pageBuilder: (_, __, ___) => ChatItemScreen()));
                   },
                   child: Center(
                     child: Container(

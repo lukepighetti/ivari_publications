@@ -1,15 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class chatItem extends StatefulWidget {
+class ChatItemScreen extends StatefulWidget {
   @override
-  _chatItemState createState() => _chatItemState();
+  _ChatItemScreenState createState() => _ChatItemScreenState();
 }
 
 /// defaultUserName use in a Chat name
 const String defaultUserName = "Alisa Hearth";
 
-class _chatItemState extends State<chatItem> with TickerProviderStateMixin {
+class _ChatItemScreenState extends State<ChatItemScreen>
+    with TickerProviderStateMixin {
   final List<Msg> _messages = <Msg>[];
   final TextEditingController _textController = TextEditingController();
   bool _isWriting = false;
