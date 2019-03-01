@@ -296,7 +296,7 @@ class _SignUpColumnState extends State<SignUpColumn>
             padding: EdgeInsets.only(top: 20.0),
             onPressed: () async {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (BuildContext context) => loginScreen()));
+                  builder: (BuildContext context) => LoginScreen()));
             },
             child: Text(
               "Already have an account? Sign In",

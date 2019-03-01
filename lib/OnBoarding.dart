@@ -101,7 +101,7 @@ class _OnBoardingState extends State<OnBoarding> {
       ),
       onTapDoneButton: () {
         Navigator.of(context).pushReplacement(PageRouteBuilder(
-          pageBuilder: (_, __, ___) => loginScreen(),
+          pageBuilder: (_, __, ___) => LoginScreen(),
           transitionsBuilder:
               (_, Animation<double> animation, __, Widget widget) {
             return Opacity(

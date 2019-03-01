@@ -5,13 +5,13 @@ import 'package:info_apps_flutter/UI/LoginOrSignup/LoginAnimation.dart';
 import 'package:info_apps_flutter/UI/LoginOrSignup/Signup.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class loginScreen extends StatefulWidget {
+class LoginScreen extends StatefulWidget {
   @override
-  _loginScreenState createState() => _loginScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
 /// Component Widget this layout UI
-class _loginScreenState extends State<loginScreen>
+class _LoginScreenState extends State<LoginScreen>
     with TickerProviderStateMixin {
   //Animation Declaration
   AnimationController sanimationController;
