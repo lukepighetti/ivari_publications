@@ -229,8 +229,8 @@ class _homeState extends State<home> {
                 InkWell(
                   onTap: () {
                     Navigator.of(context).pop();
-                    Navigator.of(context).push(
-                        PageRouteBuilder(pageBuilder: (_, __, ___) => about()));
+                    Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (_, __, ___) => AboutWebview()));
                   },
                   child: Text("About",
                       style: TextStyle(
