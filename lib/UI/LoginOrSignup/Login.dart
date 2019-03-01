@@ -151,7 +151,7 @@ class _LoginScreenState extends State<LoginScreen>
                             /// TextFromField Email
                             Padding(
                                 padding: EdgeInsets.symmetric(vertical: 10.0)),
-                            textFromField(
+                            MyTextFormField(
                               icon: Icons.email,
                               password: false,
                               email: "Email",
@@ -161,7 +161,7 @@ class _LoginScreenState extends State<LoginScreen>
                             /// TextFromField Password
                             Padding(
                                 padding: EdgeInsets.symmetric(vertical: 5.0)),
-                            textFromField(
+                            MyTextFormField(
                               icon: Icons.vpn_key,
                               password: true,
                               email: "Password",
@@ -238,14 +238,14 @@ class _LoginScreenState extends State<LoginScreen>
 }
 
 /// textfromfield custom class
-class textFromField extends StatelessWidget {
+class MyTextFormField extends StatelessWidget {
   bool password;
   String email;
   IconData icon;
   TextInputType inputType;
   final textEditingController;
 
-  textFromField(
+  MyTextFormField(
       {this.email,
       this.icon,
       this.inputType,
