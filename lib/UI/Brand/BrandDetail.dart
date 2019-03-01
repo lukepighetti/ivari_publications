@@ -251,7 +251,7 @@ class _BrandDetailState extends State<BrandDetail> {
                               ),
                             ),
                             Padding(padding: EdgeInsets.only(top: 40.0)),
-                            buttonCustom(
+                            ButtonCustom(
                               color: Colors.blue,
                               txt: "Message",
                               ontap: () {
@@ -261,7 +261,7 @@ class _BrandDetailState extends State<BrandDetail> {
                               },
                             ),
                             Padding(padding: EdgeInsets.only(top: 10.0)),
-                            buttonCustom(
+                            ButtonCustom(
                               color: Colors.indigoAccent,
                               txt: notif,
                               ontap: () {
@@ -475,12 +475,12 @@ class _BrandDetailState extends State<BrandDetail> {
 }
 
 /// Class For Botton Custom
-class buttonCustom extends StatelessWidget {
+class ButtonCustom extends StatelessWidget {
   String txt;
   Color color;
   GestureTapCallback ontap;
 
-  buttonCustom({this.txt, this.color, this.ontap});
+  ButtonCustom({this.txt, this.color, this.ontap});
 
   @override
   Widget build(BuildContext context) {
