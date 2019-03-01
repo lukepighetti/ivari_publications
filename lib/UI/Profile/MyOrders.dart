@@ -132,7 +132,7 @@ class _OrderScreenState extends State<OrderScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        qeueuItem(
+                        QueueItem(
                           icon: "assets/img/bag.png",
                           txtHeader: "Ready to Pickup",
                           txtInfo: "Order from TrevaShop",
@@ -140,7 +140,7 @@ class _OrderScreenState extends State<OrderScreen> {
                           paddingValue: 55.0,
                         ),
                         Padding(padding: EdgeInsets.only(top: 50.0)),
-                        qeueuItem(
+                        QueueItem(
                           icon: "assets/img/courier.png",
                           txtHeader: "Order Processed",
                           txtInfo: "We are preparing your order",
@@ -148,7 +148,7 @@ class _OrderScreenState extends State<OrderScreen> {
                           paddingValue: 16.0,
                         ),
                         Padding(padding: EdgeInsets.only(top: 50.0)),
-                        qeueuItem(
+                        QueueItem(
                           icon: "assets/img/payment.png",
                           txtHeader: "Payment Confirmed",
                           txtInfo: "Awaiting Confirmation",
@@ -156,7 +156,7 @@ class _OrderScreenState extends State<OrderScreen> {
                           paddingValue: 55.0,
                         ),
                         Padding(padding: EdgeInsets.only(top: 50.0)),
-                        qeueuItem(
+                        QueueItem(
                           icon: "assets/img/order.png",
                           txtHeader: "Order Placed",
                           txtInfo: "We have received your order",
@@ -228,7 +228,7 @@ class _OrderScreenState extends State<OrderScreen> {
 }
 
 /// Constructor Data Orders
-class qeueuItem extends StatelessWidget {
+class QueueItem extends StatelessWidget {
   static var _txtCustomOrder = TextStyle(
     color: Colors.black45,
     fontSize: 13.5,
@@ -239,7 +239,7 @@ class qeueuItem extends StatelessWidget {
   final String icon, txtHeader, txtInfo, time;
   final double paddingValue;
 
-  qeueuItem(
+  QueueItem(
       {this.icon, this.txtHeader, this.txtInfo, this.time, this.paddingValue});
 
   @override
