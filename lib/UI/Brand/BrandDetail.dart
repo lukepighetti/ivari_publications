@@ -3,24 +3,24 @@ import 'package:info_apps_flutter/ListItem/BrandDataList.dart';
 import 'package:info_apps_flutter/UI/Brand/Chat.dart';
 import 'package:info_apps_flutter/UI/Home/home.dart';
 
-class brandDetail extends StatefulWidget {
+class BrandDetail extends StatefulWidget {
   @override
 
   /// Get data from BrandDataList.dart (List Item)
   /// Declare class
   final Brand brand;
-  brandDetail(this.brand);
-  _brandDetailState createState() => _brandDetailState(brand);
+  BrandDetail(this.brand);
+  _BrandDetailState createState() => _BrandDetailState(brand);
 }
 
-class _brandDetailState extends State<brandDetail> {
+class _BrandDetailState extends State<BrandDetail> {
   /// set key for bottom sheet
   final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
 
   /// Get data from BrandDataList.dart (List Item)
   /// Declare class
   final Brand brand;
-  _brandDetailState(this.brand);
+  _BrandDetailState(this.brand);
   String notif = "Notifications";
 
   /// https://firebasestorage.googleapis.com/v0/b/beauty-look.appspot.com/o/Artboard%203.png?alt=media&token=dc7f4bf5-8f80-4f38-bb63-87aed9d59b95
