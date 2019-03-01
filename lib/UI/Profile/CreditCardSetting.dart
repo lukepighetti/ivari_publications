@@ -127,7 +127,7 @@ class _CreditCardSettingScreenState extends State<CreditCardSettingScreen> {
                   style: _txtCustomHead,
                 ),
               ),
-              creditCard(),
+              CreditCard(),
               Padding(
                 padding:
                     const EdgeInsets.only(top: 30.0, left: 15.0, bottom: 10.0),
@@ -146,7 +146,7 @@ class _CreditCardSettingScreenState extends State<CreditCardSettingScreen> {
 }
 
 /// Constructor for Card
-class creditCard extends StatelessWidget {
+class CreditCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
