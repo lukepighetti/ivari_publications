@@ -136,7 +136,7 @@ class _CreditCardSettingScreenState extends State<CreditCardSettingScreen> {
                   style: _txtCustomHead.copyWith(fontSize: 16.0),
                 ),
               ),
-              transactionsDetail()
+              TransactionsDetail()
             ],
           ),
         ),
@@ -272,10 +272,9 @@ class CreditCard extends StatelessWidget {
 }
 
 /// Constructor for Transactions
-class transactionsDetail extends StatelessWidget {
+class TransactionsDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQuery = MediaQuery.of(context);
     return Padding(
       padding: const EdgeInsets.only(
           top: 10.0, left: 15.0, right: 15.0, bottom: 10.0),
