@@ -3,12 +3,12 @@ import 'package:info_apps_flutter/ListItem/BrandDataList.dart';
 import 'package:info_apps_flutter/UI/Brand/BrandDetail.dart';
 import 'package:info_apps_flutter/UI/Brand/Search.dart';
 
-class brand extends StatefulWidget {
+class BrandScreen extends StatefulWidget {
   @override
-  _brandState createState() => _brandState();
+  _BrandScreenState createState() => _BrandScreenState();
 }
 
-class _brandState extends State<brand> {
+class _BrandScreenState extends State<BrandScreen> {
   @override
   Widget build(BuildContext context) {
     /// Component appbar

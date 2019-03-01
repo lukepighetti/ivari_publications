@@ -193,8 +193,8 @@ class _homeState extends State<home> {
                 InkWell(
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.of(context).push(
-                        PageRouteBuilder(pageBuilder: (_, __, ___) => brand()));
+                    Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (_, __, ___) => BrandScreen()));
                   },
                   child: Text("Categorie Brand",
                       style: TextStyle(
